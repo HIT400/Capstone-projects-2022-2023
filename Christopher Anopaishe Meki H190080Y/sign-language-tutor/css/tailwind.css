@@ -1,0 +1,11 @@
+.hello {
+    color:red
+}
+
+.bg-bambooo {
+    background-image: url("background3.png");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
