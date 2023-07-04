@@ -8,8 +8,8 @@
 
 ## What's what here
 
-- DHRA - MacOS Desktop client for health institutions
-- DHRA API - DRF REST API
-- Utano Patient - Android / iOS Mobile client for patients
+- Institution Desktop - MacOS Desktop client for health institutions
+- API - DRF REST API
+- Patient Mobile - Android / iOS Mobile client for patients
 
 > Both Desktop and mobile clients are written with [Flutter](https://flutter.dev)
