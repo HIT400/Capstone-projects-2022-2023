@@ -1,0 +1,34 @@
+{
+    "name": "Stand",
+    "address": "3595 rimuka Kadoma",
+    "description": "Good land in a upcoming neighbourhood",
+    "price": "20",
+    "image": "http://bafybeicu24wko7c5ahy7mhtkayenymz3mt2ed4wdkge2mckqf7epgz2uoq.ipfs.localhost:8080/1.jpg",
+    "id": "1",
+    "attributes": [
+        {
+            "trait_type": "Purchase Price",
+            "value": 20
+        },
+        {
+            "trait_type": "Type of Residence",
+            "value": "Land"
+        },
+        {
+            "trait_type": "Bed Rooms",
+            "value": 0
+        },
+        {
+            "trait_type": "Bathrooms",
+            "value": 0
+        },
+        {
+            "trait_type": "Square Meters",
+            "value": 800
+        },
+        {
+            "trait_type": "Year Purchased",
+            "value": 2013
+        }
+    ]
+}

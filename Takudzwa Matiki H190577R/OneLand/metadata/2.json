@@ -1,0 +1,38 @@
+{
+    "name": "Stand",
+    "address": "1 Rimuka Kadoma",
+    "description": "Good large Stand in a good area. Close to schools and shopping centers. The stand is 600 square meters",
+    "price": "15",
+    "image": "http://bafybeicu24wko7c5ahy7mhtkayenymz3mt2ed4wdkge2mckqf7epgz2uoq.ipfs.localhost:8080/2.jpg",
+    "id": "2",
+    "attributes": [
+        {
+            "trait_type": "Purchase Price",
+            "value": 15
+        },
+        {
+            "trait_type": "Type of Residence",
+            "value": "Land"
+        },
+        {
+            "trait_type": "Bed Rooms",
+            "value": 0
+        },
+        {
+            "trait_type": "Bathrooms",
+            "value": 0
+        },
+        {
+            "trait_type": "Square Meters",
+            "value": 600
+        },
+        {
+            "trait_type": "Year Purchased",
+            "value": 2020
+        }
+        
+       
+            
+        
+    ]
+}
