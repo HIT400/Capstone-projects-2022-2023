@@ -1,0 +1,383 @@
+{%extends "dheader.html"%}
+{%block title%}
+
+I N A R D-{{rez[0][1]}}
+
+{%endblock%}
+
+{%block style%}
+
+<style>
+  * {
+      box-sizing: border-box;
+  }
+.carousel-indicators{
+margin-top: 1rem;
+position: absolute;
+top: 15px;
+bottom: auto;
+right: 0;
+z-index: 15;
+display: flex;
+justify-content: center;
+padding-left: 0;
+margin-right: 15%;
+margin-left: 15%;
+list-style: none;
+}
+
+ .carousel-indicators li {
+list-style: none;
+box-sizing: border-box;
+position: relative;
+flex: 0 1 auto;
+width: 30px;
+height: 13px;
+margin-right: 3px;
+margin-left: 3px;
+text-indent: -999px;
+cursor: pointer;
+background-color: #bfa647;}
+
+  .inard{background-color: #bfa647;}
+  .carousel-control-prev-icon, .carousel-control-next-icon{color: #bfa647;}
+
+  body {
+      margin: 0;
+      font-family: Arial;
+  }
+  
+  .header {
+      text-align: center;
+      padding: 32px;
+  }
+  
+  .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+  }
+  
+  /* Create four equal columns that sits next to each other */
+  .column {
+      -ms-flex: 25%; /* IE10 */
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px;
+  }
+  
+  .column img {
+      margin-top: 8px;
+      vertical-align: middle;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+      .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+      }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+      .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+      }
+  }
+  
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+      width: 100%;
+  }
+}
+
+.row .card{margin-bottom: 15px;}
+
+</style>
+
+{%endblock%}
+
+
+{%block body%} 
+
+<div class="container">
+
+  
+  <div class="card col-md-12">
+    <div class="card-header">{{rez[0][1]}}</div>
+  <div class="card-body" style="overflow-x: hidden; margin-right:-15px;margin-left:-15px">
+
+  <div class="row" > 
+    
+    <!--pics-->
+    
+  
+
+      <div class="card col-lg-4 col-md-6 " style="box-shadow: 3px 15px 15px 3px rgba(0, 0, 0, .4), 0px 10px 10px 0px rgba(0, 0, 0, 0.3);">
+       
+        
+          <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Location
+          <br>{{rez[0][2]}}<br>{{rez[0][3]}}<br>{{rez[0][4]}}</h4>
+           <br>
+                   
+          <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Property Type : {{rez[0][5]}}</h4>
+          <br>
+          {%if rez[0][6] !='' %}
+          <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Land Area : <small >{{rez[0][6]}}  m<sup>2</sup></small></h4>
+          
+          {%endif%}
+          <br>
+          {%if rez[0][7] !='' %}
+          <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Office Area<small > : {{rez[0][7]}} m<sup>2</sup></small></h4>
+          {%endif%}
+          <br>
+          {%if rez[0][8] !='' %}
+          <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Warehouse Area<small > : {{rez[0][8]}} m<sup>2</sup></small></h4>
+          {%endif%}
+        
+        
+    
+    {%if rez[0][9] !='' %}
+    <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Number Of Bedrooms <small >: {{rez[0][9]}}</small></h4>
+    {%endif%}
+  <br>
+    {%if rez[0][10] !='' %}
+    <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Number Of Bathrooms <small >: {{rez[0][10]}} </small></h4>
+    {%endif%}
+    
+</div>
+
+
+
+<div class=" card col-lg-4 col-md-6  inard" style="box-shadow: 3px 15px 15px 3px rgba(0, 0, 0, .4), 0px 10px 10px 0px rgba(0, 0, 0, 0.3);">
+
+  <h4 class="badge badge-pill badge-secondary" style="font-size: inherit;">Description</h4>
+{%if rez[0][11] !='' %}
+{{rez[0][11]}} 
+{%endif%}
+</div>
+
+
+<div class="card col-lg-4" style="box-shadow: 3px 15px 15px 3px rgba(0, 0, 0, .4), 0px 10px 10px 0px rgba(0, 0, 0, 0.3);">
+  
+    <h3 class="badge badge-pill badge-secondary" style="font-size: inherit;">General Features</h3>
+    <p class="card-text"><ul>
+      {% for m in rez[0][14].split("'")%}
+      {%if m !=']' %}
+      {%if m !='['%}
+      {%if m !=', '%}
+    <li>{{m}}</li>
+    {%endif%}
+    {%endif%}
+    {%endif%}
+      {% endfor%}
+    </ul></p>
+ 
+    <h3 class="badge badge-pill badge-secondary" style="font-size: inherit;">Internal Features</h3>
+    <p class="card-text"> <ul>
+      {% for m in rez[0][12].split("'")%}
+      {%if m !=']' %}
+      {%if m !='['%}
+      {%if m !=', '%}
+      <li>{{m}}</li>
+      {%endif%}
+    {%endif%}
+    {%endif%}
+      {% endfor%}</ul></p>
+ 
+      <h3 class="badge badge-pill badge-secondary" style="font-size: inherit;">External Features</h3>
+  <ul>
+  {% for m in rez[0][13].split("'")%}
+  {%if m !=']' %}
+  {%if m !='['%}
+  {%if m !=', '%}
+<li>{{m}}</li>
+{%endif%}
+{%endif%}
+{%endif%}
+  {% endfor%}</ul>
+</div>
+
+
+
+
+
+</div>
+  
+  
+  
+   
+
+
+
+
+</div>
+<br>
+<div class="container justify-content-center">
+  <div id="demo" class="carousel slide col-md-10 mx-auto" data-ride="carousel" >
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators" style="top: 15px;">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    {%for x in range(1,l+1)%}
+    <li data-target="#demo" data-slide-to="{{x}}" ></li>
+    {%endfor%}
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <img class="modimg" id="Logo" onclick="imgClick(this)"  src="{{ url_for('static', filename = 'inard.jpg') }}" alt="INARD" style="width:100%">
+    
+ </div>
+    {%for m in rez[0][15].split("'")%}
+    {%for i in m.split(", ")%}
+    {%for n in i.split("[")%}
+    {%for o in n.split("]")%}
+    
+    
+    {%if o!=("")%}
+    <div class="carousel-item" style="height: 600px; overflow-y: hidden;">
+      <img class="modimg" id="{{o}}" onclick="imgClick(this)"  src="{{ url_for('static', filename = 'Properties') }}/{{rez[0][16]}}/{{o}}" alt="{{o}}" style="width:100%;">
+    
+ </div>
+ {%endif%}
+ {% endfor%}
+ {% endfor%}
+ {% endfor%}
+ {% endfor%}
+  
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span >
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span >
+  </a>
+</div>
+</div>
+
+</div>
+
+</div>
+<!--pic viewer-->
+<div id="myModal" class="modal" style="z-index: 50;">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01" alt="pic">
+  <div id="caption"></div>
+</div>
+<!--pic viewer-->
+  
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('myModal');
+  
+  // Get the image and insert it inside the modal - use its "alt" text as a caption
+  var modalImg= document.getElementById("img01");
+  var captionText = document.getElementById("caption");
+  function imgClick(pic){
+      modal.style.display = "block";
+      modalImg.src = pic.src;
+      captionText.innerHTML = pic.alt;
+  }
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() { 
+      modal.style.display = "none";
+  }
+  </script>
+{%endblock%}
+
+

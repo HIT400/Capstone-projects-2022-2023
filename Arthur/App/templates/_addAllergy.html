@@ -1,0 +1,346 @@
+
+{% if user!="Site_Admin" %}
+{% extends 'dzheader.html' %}
+{% else %}
+{% extends 'dheader.html' %}
+{% endif %}
+
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+    
+     
+      {%block style%}
+       
+    
+      {%endblock%}
+
+  {%block body%}
+    
+<div class="container">
+  <div class="row justify-content-center align-items-center g-2">
+   
+ 
+ {% if info=="allegies" %}
+
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <h2>Add Allergy</h2>
+      <!--- start search container -->
+
+     
+
+
+  <form action="{{url_for('addAllergy', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input type="text" class="form-control" id="allergy" placeholder="Enter Allergy Name" name="allergy">
+    <label for="allergy">Allergy :</label>
+  </div>
+
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+    </div>
+  </div>
+
+
+ {% elif info=="medical-condition" %}
+
+
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+     
+      <h2>Add Medical Condition</h2>
+
+
+  <form action="{{url_for('addCondition', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input type="text" class="form-control" id="conditionz" placeholder="Enter Medical Condition" name="conditionz">
+    <label for="conditionz">Medical Condition :</label>
+  </div>
+
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+
+    </div>
+  </div>
+
+
+
+
+  {% elif info=="blood-type" %}
+
+
+
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+     
+      <h2>Add Blood Type</h2>
+
+  <form action="{{url_for('addBloodtype', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="mb-3 mt-3 ml-3">
+    <label for="bloodtype" class="mb-3">Blood Type :</label>
+    <select class="form-select" name="bloodtype"  id="bloodtype" >
+      <option>A</option>
+      <option>B</option>
+      <option>AB</option>
+      <option>O</option>
+    </select>
+  
+
+  </div>
+
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  {% elif info=="prescription" %}
+
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+     
+      <h2>Add Prescription</h2>
+
+
+
+  <form action="{{url_for('addPrescription', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <textarea  type="text" class="form-control" id="_Prescription" placeholder="Enter Medical Condition" name="_Prescription"></textarea>
+    <label for="_Prescription">Medication :</label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="_PrescriptionDate" placeholder="Enter Phone 2" name="_PrescriptionDate">
+    <label for="_PrescriptionDate" class="n-2">Date Prescribed </label>
+  </div>
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  {% elif info=="diagnosis" %}
+
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+     
+      <h2>Add Diagnosis</h2>
+
+
+  <form action="{{url_for('addDiagnosis', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input  type="text" class="form-control" id="_Diagnosis" placeholder="Enter Medical Condition" name="_Diagnosis">
+    <label for="_Diagnosis">Diagnosis :</label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="_DiagnosisDate" placeholder="Enter Phone 2" name="_DiagnosisDate">
+    <label for="_DiagnosisDate" class="n-2">Date Diagnosed </label>
+  </div>
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+
+
+  {% elif info=="test" %}
+
+  
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+     
+      <h2>Add Test </h2>
+
+
+  <form action="{{url_for('addTest', person=person)}}" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input  type="text" class="form-control" id="_Test" placeholder="Enter Medical Condition" name="_Test">
+    <label for="_Test">Test :</label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="_TestDate" placeholder="Enter Phone 2" name="_TestDate">
+    <label for="_TestDate" class="n-2">Date Tested </label>
+  </div>
+
+
+
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+
+    </div>
+  </div>
+
+
+
+  {% else %}
+  <div class="card col-md-4 bg-light border shadow text-dark">
+    <div class="card-title">
+      <p class="lead">
+ You've succesifully added information to your record
+    
+
+      </p>
+     
+    
+    </div>
+    
+  </div>
+
+{%endif%}
+
+
+
+
+</div>
+
+ 
+</div>
+ 
+{%endblock%}
+
+
+
+

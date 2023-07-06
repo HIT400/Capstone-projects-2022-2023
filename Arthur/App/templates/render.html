@@ -1,0 +1,38 @@
+
+{% if sales!=[] %}
+<div class="row" id="imba_dzitsva">
+    
+
+<div class="card">
+  
+  <div class="card-body">
+    <h4 class="card-title">Your seach results...</h4>
+    <div class="row">
+{% for b in sales%}     
+{% for a in b%}
+<div class="card col-md-4">
+  <img class="card-img-top" src="{{ url_for('static', filename = 'Properties') }}/{{a[16]}}/{{a[15].split("'")[1]}}" alt="Card image" style="width:100%">
+  <div class="card-body">
+    <h4 class="card-title">{{a[1]}}</h4>
+    <p class="card-text">{{a[9]}} Bedrooms and {{a[10]}} Bathrooms </p>
+    <p class="card-text"> {{a[2]}}, {{a[3]}}, {{a[4]}} </p>
+
+    <h5>Price : {{a[19]}} </h5>
+
+    
+
+    <a href="/property/{{db}}/{{a[0]}}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+{% endfor%}
+{% endfor%}
+</div>
+ </div>
+</div>
+
+</div>
+  {% endif %}
+  
+
+
+

@@ -1,0 +1,464 @@
+﻿ModuleCode,ModuleName,ModuleSkills,ModuleCredits,ModuleDescription,ModuleStatus,ModuleStartDate,ModuleJobs,Practical,ModuleCourses
+ISE111,Programming in C,"Understand the syntax and semantics of the C programming language.
+Be able to write, debug, and test C programs using a variety of tools.
+Understand the concepts of data types, control structures, functions, pointers, and memory management.
+Develop skills in problemsolving and algorithm design.",2,"This module provides an introduction to the C programming language and its features. Students will learn about data types, control structures, functions, pointers, and memory management. Handson exercises and projects will help students gain practical experience with C programming.",Mandetory,01/01/1900,"Software Developer
+Embedded Systems Engineer
+Systems Administrator
+Database Administrator",YES,ISE
+ISE112,Operating Systems Principles and Design,"Understand the principles and design of operating systems, including process management, memory management, file systems, and security.
+Be able to analyze and evaluate the performance of operating systems.
+Understand the limitations and challenges of operating systems and be able to critically evaluate the performance of operating systems.
+Develop skills in programming and systems administration.",2,"This module provides an introduction to the principles and design of operating systems. Topics covered include process management, memory management, file systems, and security. The module also includes handson exercises and projects to help students gain practical experience with operating systems.",Mandetory,01/01/1900,"Operating Systems Developer
+Systems Administrator
+Computer Network Architect
+Database Administrator",YES,ISE
+ISE113,Logic Design & Switching Circuits,"Understand the basic concepts of logic design and switching circuits, including Boolean algebra, combinatorial circuits, sequential circuits, and state machines.
+Be able to analyze and design logic circuits using a variety of tools and techniques.
+Understand the limitations and challenges of logic design and switching circuits and be able to critically evaluate the performance of logic circuits.
+Develop skills in circuit design and analysis.",2,"This module provides an introduction to the basic concepts of logic design and switching circuits. Topics covered include Boolean algebra, combinatorial circuits, sequential circuits, and state machines. The module also includes handson exercises and projects to help students gain practical experience with logic design and switching circuits.",Mandetory,01/01/1900,"Digital Design Engineer
+Hardware Engineer
+FPGA Engineer
+ASIC Engineer",YES,ISE
+ISE114,Mathematical Foundations of Computer Science,"Understand the mathematical foundations of computer science, including discrete mathematics, algorithms, and complexity theory.
+Be able to analyze and evaluate algorithms and complexity of problems.
+Understand the limitations and challenges of mathematical foundations of computer science and be able to critically evaluate the performance of algorithms.
+Develop skills in mathematical modeling and problemsolving.",1,"This module provides an introduction to the mathematical foundations of computer science. Topics covered include discrete mathematics, algorithms, and complexity theory. The module also includes handson exercises and projects to help students gain practical experience with the mathematical foundations of computer science.",Mandetory,01/01/1900,"Data Scientist
+Research Scientist
+Machine Learning Engineer
+Cryptographer",,ISE
+ISE116,Introduction to Software Engineering,"Understand the different phases of the software development process
+Understand different software development methodologies
+Learn about tools and techniques that can be used to improve the software development process
+Gain experience in applying software engineering concepts to a real-world project",1,"This module provides an introduction to software engineering. Students will learn about the different phases of the software development process, including requirements gathering, design, implementation, testing, and maintenance. They will also learn about different software development methodologies, such as waterfall and agile. Finally, they will learn about tools and techniques that can be used to improve the software development process.",Mandetory,01/01/1900,"Junior software engineer
+Software development project manager
+Software development process improvement consultant
+Software development methodology researcher",,ISE
+EEE113,Analogue Electronics,"Understand the basic principles of analogue electronics.
+Be able to design and build simple analogue circuits.
+Be able to troubleshoot and repair simple analogue circuits.
+Be able to understand and use analogue electronic components.",1,This module will provide students with an introduction to analogue electronics. Students will learn about the basic principles of analogue circuits and how to design and build simple analogue circuits.,Mandetory,01/01/1900,"Analogue Electronics Engineer
+Analogue Electronics Technician
+Analogue Electronics Designer
+Analogue Electronics Salesperson",,ISE
+HIT110,Technopreneurship I  ,"Generate new business ideas and assess their feasibility
+Develop a business plan for a technopreneurial venture
+Understand the key marketing and financial considerations for technopreneurial businesses
+Understand the legal and regulatory environment within which technopreneurial businesses operate.",1,"This module introduces students to the field of technopreneurship and its potential for creating new businesses and jobs. Students will learn about the process of starting and running a technopreneurial business, including ideation, business planning, marketing, and financial management. They will also gain an understanding of the legal and regulatory framework within which technopreneurs operate. Upon completion of the module, students will be able to: 1. Generate new business ideas and assess their feasibility 2. Develop a business plan for a technopreneurial venture 3. Understand the key marketing and financial considerations for technopreneurial businesses 4. Understand the legal and regulatory environment within which technopreneurial businesses operate. Possible jobs directly linked to the module include: 1. Business consultant 2. Business coach 3. Entrepreneur 4. Venture capitalist.",Mandetory,01/01/1900,"Business consultant
+Business coach
+Entrepreneur
+Venture capitalist.",,ISE
+IST110,Technical Communication Skills I,"Understand the principles of effective technical communication.
+Develop clear and concise written communication skills.
+Understand the importance of audience analysis and adaptation.
+Develop effective oral communication skills.",1,This module provides students with the opportunity to develop their technical communication skills. Students will learn how to effectively communicate technical information to a variety of audiences.,Mandetory,01/01/1900,"Technical Writer
+Technical Editor
+Technical Communicator
+Technical Support Specialist",,ISE
+ISE 121,Object Oriented Programming,"Understand the basics of object-oriented programming
+Be able to design programs using objects
+Be familiar with the benefits and drawbacks of using objects
+Understand how object-oriented programming is used in real-world applications.",2,"This module will introduce students to the concepts of object-oriented programming. They will learn how to design and implement programs using objects, and will become familiar with the benefits and drawbacks of using this approach.",Mandetory,01/01/1900,"Software Developer
+Programmer
+Software Engineer
+Computer Scientist",Yes,ISE
+ISE 122,Visual Programming Concepts and Development,"Understand the concepts of visual programming and how to apply them in the development of applications.     
+Learn how to use different programming languages and tools to create visual programming applications.       
+Be able to design and develop visual programming applications that meet the needs of users.
+Understand the testing and debugging process for visual programming applications.",2,This module introduces students to the concepts and development of visual programming. Students will learn how to create visual programming applications using a variety of programming languages and tools.,Mandetory,01/01/1900,"Visual Programming Developer
+Visual Programming Designer
+Visual Programming Analyst
+Visual Programming Consultant",Yes,ISE
+ISE 124,Database Design Concepts,"Understand the different types of databases and how they are used.
+Learn how to design a database that is efficient and effective.
+Understand how to query a database in order to retrieve information.
+Understand the importance of data integrity and how to ensure that data is accurate and consistent.",2,"This module will introduce students to the basics of database design concepts. They will learn about the different types of databases, how to design a database, and how to query a database. Additionally, they will learn about the importance of data integrity and how to ensure that data is accurate and consistent.",Mandetory,01/01/1900,"Database Administrator
+Database Designer
+Database Analyst
+Database Developer",Yes,ISE
+ISE 125,Discrete Structures,"Understand the basic principles of discrete mathematics.
+Be able to design and analyze algorithms.
+Understand the concept of NP-completeness.
+Be able to apply discrete mathematics to solve real-world problems.",1,"Discrete structures are the mathematical foundation for computer science. In this module, students will learn about the basic principles of discrete mathematics, including logic, sets, relations, functions, and graphs. They will also be introduced to the concept of algorithm design and analysis.",Mandetory,01/01/1900,"Computer Scientist
+Software Engineer
+Research Scientist
+Data Analyst",Yes,ISE
+ISE 126,NetCentric Principles & Design,"Understand the key concepts and principles of Net-Centricity
+Be able to apply Net-Centric principles in the design of Net-Centric systems
+Understand how to analyse Net-Centric systems
+Be familiar with the jobs directly linked to Net-Centric Principles & Design",2,"Net-Centric Principles & Design is a module that will introduce you to the key concepts and principles of Net-Centricity, and how they can be applied in the design of Net-Centric systems. The module will cover the following topics:",Mandetory,01/01/1900,"Web Developer
+Web Designer
+UI Designer
+Web Protocols Researcher",Yes,ISE
+ISE 127,Data Structures and Algorithms,"Understand what data structures and algorithms are and how they are used to solve problems.
+Be able to design and implement algorithms.
+Be able to analyze the efficiency of algorithms.
+Be able to use data structures to solve problems.",1,"This module will introduce students to the concept of data structures and algorithms. They will learn how to design and implement algorithms, and how to analyze the efficiency of their algorithms. Additionally, students will learn how to use data structures to solve problems.",Mandetory,01/01/1900,"Software Engineer
+Research Scientist
+Data Analyst
+Data Scientist
+Digital Electronics",,ISE
+EEE123,Digital Electronics ,"Understand the basic principles of digital electronics.
+Be able to apply digital electronics to real-world scenarios.
+Understand the different types of digital electronic devices.
+Be able to troubleshoot digital electronic devices.",1,This module will provide students with an introduction to digital electronics. Students will learn about the basic principles of digital electronics and how to apply them to real-world scenarios. They will also learn about the different types of digital electronic devices and how to troubleshoot them.,Mandetory,01/01/1900,"Digital electronics engineer
+Digital electronics technician
+Digital electronics researcher
+Digital electronics educator",,ISE
+IST120,Technical Communication Skills II,"Understand the different needs and expectations of different audiences when communicating technical information.
+Plan and structure technical information in a way that is easy for the audience to understand.
+Use appropriate language and style when communicating technical information.
+Use various media effectively when communicating technical information.",1,"This module provides students with the opportunity to develop their technical communication skills further. Students will learn how to effectively communicate technical information to a variety of audiences. By the end of the module, students will be able to:",Mandetory,01/01/1900,"technical writer
+technical editor
+technical communication consultant.",,ISE
+HIT120,Technopreneurship II,"Understand the key concepts and skills required for technopreneurship
+Be able to identify and assess opportunities for technopreneurship
+Be able to develop and implement business plans for technopreneurship
+Be able to raise capital for technopreneurship",1,"This module aims to develop students' understanding of the key concepts and skills required to be a successful technopreneur. Students will learn how to identify and assess opportunities, develop and implement business plans, and raise capital. They will also learn about the legal and regulatory framework for technopreneurship, and the importance of intellectual property protection.",Mandetory,01/01/1900,"Technopreneur
+Business Planner
+Capital Raiser
+Intellectual Property Lawyer",,ISE
+ISE 211,Computer Architecture & Organisation,"Understand the basic concepts of computer architecture and organisation.
+Learn about the different components of a computer system and how they work together.
+Learn about the different types of computer architectures and how they can be used to improve performance.  
+Be able to apply the knowledge and skills learned in this module to design and implement efficient and effective computer systems.",2,This module will provide students with an understanding of the basic concepts of computer architecture and organisation. Students will learn about the different components of a computer system and how they work together. They will also learn about the different types of computer architectures and how they can be used to improve performance.,Mandetory,01/01/1900,"Computer Architect
+Computer Organisation Designer
+Computer Systems Analyst
+Computer Systems Engineer",Yes,ISE
+ISE 212,Advanced Databases ,"Understand the different types of databases and their uses
+Learn how to design a database for a specific purpose
+Understand how to query a database
+Learn about data integrity and security in databases",2,"This module will provide students with an introduction to the world of databases. They will learn about the different types of databases, how to design them, and how to query them. They will also learn about the importance of data integrity and security.",Mandetory,01/01/1900,"Database administrator
+Database designer
+Database developer
+Database analyst",Yes,ISE
+ISE 213,Data Communications and Networks,"Understand the basics of data communications and networking
+Learn about the different types of networks and how they work
+Learn about the different components of a network and how they interact with each other
+Gain hands-on experience in designing and implementing data communications and networking solutions",2,"This module provides students with an understanding of data communications and networks. It covers topics such as data transmission, data encoding, data link control, and network protocols. Students will learn about the different types of networks and how they work. They will also learn about the different components of a network and how they interact with each other.",Mandetory,01/01/1900,"Network Engineer
+Network Administrator
+Network Designer
+Network Analyst",Yes,ISE
+ISE 214,Software Project Management,"Understand the principles and practices of software project management
+Learn about the various tools and techniques used in managing software projects
+Understand the different approaches to project management
+Gain an understanding of the different stages of a software project lifecycle",2,"This module will provide students with an overview of the principles and practices of software project management. Students will learn about the various tools and techniques used in managing software projects, as well as the different approaches to project management. The module will also cover the different stages of a software project lifecycle, from planning and initiation to execution and closure.",Mandetory,01/01/1900,"Software Project Manager
+Software Development Manager
+IT Project Manager
+Project Manager",,ISE
+ISE 215,Operations Research,"Understand the basics of operations research and how it can be applied to real-world problems.
+Develop strong analytical and problem-solving skills.
+Learn to use various operations research techniques to optimize complex systems.
+Gain experience working with real-world data sets and developing operations research models.",1,"Operations research (OR) is a mathematical science that deals with the application of advanced analytical methods to complex decision-making problems in areas such as business, engineering, economics, and military science.",Mandetory,01/01/1900,"Operations Research Analyst
+Business Analyst
+Data Analyst
+Systems Analyst",,ISE
+ISE 216,Object Oriented Programming in Java," Understand the basics of objectoriented programming in Java.
+
+ Be able to create and use objects in Java programs.
+
+ Understand how inheritance and polymorphism work in Java.
+
+ Be able to write simple Java programs that make use of these concepts.   ",2,"This module will introduce students to the basics of objectoriented programming in Java. Students will learn how to create and use objects, as well as how to inheritance and polymorphism. By the end of the module, students should be able to write simple Java programs that make use of these concepts.   ",Mandetory,01/01/1900," Java Developer
+
+ Software Engineer
+
+ Web Developer
+
+ Mobile App Developer",Yes,ISE
+HIT200,Mini Project," Students will learn how to apply their knowledge of web development in a realworld setting.
+
+ Students will learn how to work effectively in a team.
+
+ Students will learn how to manage a project from start to finish.        
+
+ Students will learn how to communicate with clients and stakeholders.    ",2,"The Mini Project module will provide students with the opportunity to apply the knowledge and skills they have acquired throughout the course in a realworld setting. Students will work in teams to complete a project for a client, using the latest web development technologies.",Mandetory,01/01/1900," Web Developer
+
+ Project Manager
+
+ Client Relations Manager
+
+ Web Development Consultant",Yes,ISE
+HIT 210,Technopreneurship III," Understand the process of commercialising technology
+
+ Understand the role of the technopreneur
+
+ Understand the key stages in the commercialisation process
+
+ Understand the challenges and risks associated with commercialising technology",1,"This module is designed to provide students with an understanding of the process of commercialising technology and the role of the technopreneur. Students will learn about the key stages in the commercialisation process, the resources and support available to technopreneurs, and the challenges and risks associated with commercialising technology. The module will cover the following topics:
+
+The technology commercialisation process
+
+The role of the technopreneur
+
+The key stages in the commercialisation process
+
+The resources and support available to technopreneurs
+
+The challenges and risks associated with commercialising technology        
+
+The impact of commercialising technology on society",Mandetory,01/01/1900," Technology Commercialisation Manager
+
+ Technology Transfer Officer
+
+ Business Development Manager (Technology)
+
+ Innovation Manager",,ISE
+ISE 221,Graphics and Visualisation," Understand the principles behind effective visualisation.
+
+ Learn about the different techniques used to create visualisations.      
+
+ Be able to use various software packages to create visualisations.       
+
+ Understand the role of graphics and visualisation in various fields.     ",2,"This module will introduce students to the field of graphics and visualisation. They will learn about the different techniques used to create visualisations, as well as the principles behind effective visualisation. They will also learn how to use various software packages to create their own visualisations.",Mandetory,01/01/1900," Graphic Designer
+
+ Visualisation Specialist
+
+ Multimedia Designer
+
+ User Experience Designer",Yes,ISE
+ISE 222,Information Systems Development," Understand the different stages of information systems development.      
+
+ Understand the different types of information systems.
+
+ Learn how to develop, implement, and maintain information systems.       
+
+ Understand the importance of information systems in businesses and organizations.",2,"The Information Systems Development module will provide students with the skills and knowledge necessary to develop, implement, and maintain information systems. Students will learn about the various stages of information systems development, including requirements gathering, design, implementation, and testing. They will also learn about the different types of information systems, such as management information systems, decision support systems, and expert systems.",Mandetory,01/01/1900," Information Systems Developer
+
+ Information Systems Analyst
+
+ Information Systems Manager
+
+ Information Systems Consultant",,ISE
+ISE 223,Systems Programming Concepts & Compiler Design," Understand the different components of a compiler and how they work together.
+ Be able to design and implement a compiler for a given programming language.
+ Understand how to optimize code for performance.
+ Understand the different types of programming languages and how to choose the right language for a given task.",2,"This module will provide students with an introduction to systems programming concepts and compiler design. Students will learn about the different components of a compiler, how to design and implement a compiler, and how to optimize code for performance. Students will also learn about the different types of programming languages and how to choose the right language for a given task.",Mandetory,01/01/1900," Compiler Developer
+ Programming Language Designer
+ Performance Analyst
+ Software Engineer",Yes,ISE
+ISE 224,Microprocessors & Embedded Systems," Understand the basic components of a microprocessor and how they work together
+ Understand the different types of embedded systems and the challenges associated with each
+ Be able to program a microprocessor to control an embedded system        
+ Design and implement a simple embedded system",2,"This module will provide students with an introduction to microprocessors and embedded systems. Students will learn about the basic components of a microprocessor, the different types of embedded systems, and the challenges associated with designing and implementing these systems. The module will also cover the basics of programming a microprocessor and will include a handson component where students will have the opportunity to design and implement a simple embedded system.",Mandetory,01/01/1900," Microprocessor Engineer
+ Embedded Systems Engineer
+ Firmware Engineer
+ Software Engineer",Yes,ISE
+ISE 225,Numerical Methods & Statistical Techniques ," Understand the basics of numerical methods and statistical techniques    
+ Be able to apply numerical methods and statistical techniques to solve problems
+ Understand when to use numerical methods and statistical techniques      
+ Be able to interpret results from numerical methods and statistical techniques",1,"This module will provide students with an introduction to numerical methods and statistical techniques. The module will cover topics such as interpolation, curve fitting, root finding, integration, and differential equations. In addition, students will learn about statistical methods such as hypothesis testing, regression analysis, and time series analysis.",Mandetory,01/01/1900," Mathematician
+ Statistician
+ Data Analyst
+ Research Scientist",,ISE
+HIT200,Mini project," Students will gain experience working on a project from start to finish. 
+ Students will learn how to apply the knowledge and skills they have learned in the classroom to a realworld situation.
+ Students will learn how to work independently and as part of a team.     
+ Students will learn how to manage their time and resources effectively.  ",2,This module will provide students with the opportunity to work on a mini project. The project will be chosen by the student and will be related to their field of study. The project will allow students to apply the knowledge and skills they have learned in the classroom to a realworld situation.        ,Mandetory,01/01/1900," Project Manager
+ Business Analyst
+ Consultant
+ Entrepreneur",Yes,ISE
+EEE 221,Digital Signal Processing," Understand the basic principles of digital signal processing.
+
+ Learn about the various types of digital signal processing algorithms.   
+
+ Learn how to implement digital signal processing algorithms using software.
+
+ Understand the principles of digital signal filtering and how to design and implement digital filters.",1,This module covers the basic principles of digital signal processing. Students will learn about the various types of digital signal processing algorithms and how to implement them using software. They will also learn about the principles of digital signal filtering and how to design and implement digital filters.,Mandetory,01/01/1900,"Digital signal processing engineer
+Digital filter design engineer
+Audio engineer
+Acoustic engineer",,ISE
+HIT 220,Technopreneurship IV," Understand the role of technology in society and the economy
+ Understand the different types of technology
+ Understand the impact of technology on society and the economy
+ Understand the different types of technopreneurship",1,"This module is designed to provide students with an understanding of the role of technology in society and the economy. It will cover the history of technology, the different types of technology, and the impact of technology on society and the economy. The module will also cover the different types of technopreneurship, and the skills and knowledge needed to be a successful technopreneur.",Mandetory,01/01/1900," Technology consultant
+ Technology analyst
+ Technology strategist
+ Technology entrepreneur",,ISE
+HIT301,Internship ," Students will gain an understanding of what it is like to work in a professional environment.
+
+ Students will learn new skills and knowledge in a specific area of work. 
+
+ Students will develop their ability to work independently and as part of a team.
+
+ Students will build up a network of professional contacts.",8,"The Internship module will provide students with the opportunity to gain firsthand experience of working in a professional environment. Students will be placed in an organisation relevant to their degree programme in order to gain an insight into the daytoday running of the business. This module will also give students the chance to develop their skills and knowledge in a specific area of work, as well as to build up a network of professional contacts.",Mandetory,01/01/1900,"Junior software engineer
+Software development intern
+Entry-level software engineer
+Junior software developer",Yes,ISE
+ISE 411,Distributed Systems," Students will be able to explain the basics of distributed systems.      
+
+ Students will be able to identify the different types of distributed systems.
+
+ Students will be able to describe the challenges involved in designing, implementing, and managing distributed systems.
+
+ Students will be able to identify potential jobs that involve working with distributed systems.",2,"This module will provide students with an introduction to distributed systems. Students will learn about the different types of distributed systems, their components, and how they work together to provide services. Students will also learn about the challenges involved in designing, implementing, and managing distributed systems.",Mandetory,01/01/1900,"Distributed systems engineer
+Distributed systems administrator
+Distributed systems developer
+Distributed systems analyst",Yes,ISE
+ISE 412,Mobile Computing and Wireless Communication," Understand the history of mobile computing and the different types of mobile devices.
+
+ Understand the various wireless communication technologies.
+
+ Understand the security risks associated with mobile devices and wireless networks.
+
+ Develop applications for mobile devices.",2,"This module will provide students with an introduction to mobile computing and wireless communication. Students will learn about the history of mobile computing, the different types of mobile devices, and the various wireless communication technologies. Students will also learn about the security risks associated with mobile devices and wireless networks. Upon completion of this module, students will be able to:",Mandetory,01/01/1900," Mobile Application Developer
+
+ Wireless Network Engineer
+
+ Mobile Device Security Specialist
+
+ Wireless Communications Consultant",Yes,ISE
+ISE 413,Geographical  Information Systems," Understand the principles of GIS and how it can be used to solve problems in a variety of contexts
+ Learn how to use a GIS software package to store, manipulate and display geographical data
+ Understand the history and development of GIS, and the main software packages available
+ Use a GIS to solve problems in environmental management, urban planning, and marketing contexts",2,"The module Geographical Information Systems is an introduction to the use of computers for storing, manipulating and displaying geographical data. The module covers the principles of GIS, its history and development, and the main software packages available. Students will learn how to use a GIS to solve problems in a variety of contexts, including environmental management, urban planning, and marketing.",Mandetory,01/01/1900,"GIS Analyst
+GIS Technician
+GIS Developer
+GIS Coordinator",Yes,ISE
+ISE 414,Simulation & Modelling," Students will be able to identify and select appropriate data sets for simulations and models.
+
+ Students will be able to create and interpret simulations and models.    
+
+ Students will be able to identify the limitations of simulations and models.
+
+ Students will be able to identify the potential applications of simulations and models.",2,"The Simulation & Modelling module will provide students with the skills and knowledge necessary to create and interpret simulations and models. Students will learn how to identify and select appropriate data sets for simulations and models, as well as how to create and interpret the results of simulations and models.",Mandetory,01/01/1900," Simulation & Modelling Analyst
+
+ Simulation & Modelling Engineer
+
+ Simulation & Modelling Specialist
+
+ Simulation & Modelling Consultant",,ISE
+ISE 415,Engineering Economies for Software," Understand the basics of engineering economies and how they can be applied to software development projects.
+
+ Be able to perform costbenefit analysis and cost estimation for software development projects.
+
+ Understand the risks involved in software development projects and how to mitigate them.
+
+ Be familiar with the different types of software development project funding models and how to choose the most appropriate one for a given project.  ",2,"This module will cover the basic concepts of engineering economies and how they can be applied to software development projects. Topics covered will include costbenefit analysis, cost estimation, and risk analysis.",Mandetory,01/01/1900," Software Development Project Manager
+
+ Software Development Project Planner
+
+ Software Development Project Cost Estimator
+
+ Software Development Risk Analyst",,ISE
+HIT400,Capstone Design Project,"Understand the principles of software engineering and how they can be applied to the design, development and evaluation of a software system.
+Work effectively in a team to design, implement and test a software system.
+Understand the importance of user requirements in the design of a software system.
+Understand the importance of testing and evaluation in the development of a software system.",4,"This module is the Capstone Design Project, which is the final module of the programme. The aim of the project is to provide students with an opportunity to apply the knowledge and skills they have acquired throughout the programme in a realworld context. The project will be undertaken in teams of four students, with each team working on a different project. The projects will be chosen from a range of options, which will be provided by the programme staff. The projects will be based on realworld problems and will require the use of the knowledge and skills acquired throughout the programme. The project will be assessed by a panel of experts, who will judge the quality of the project and the team's performance. The projects will be graded on a pass/fail basis.",Mandetory,01/01/1900,"Software Engineer
+Software Developer
+Software Testing Engineer
+Software Systems Analyst",Yes,ISE
+ISE 416,Neural Networks & Pattern Matching ," Understand the basics of how neural networks work.
+ Be able to construct and train simple neural networks.
+ Be able to use neural networks for pattern recognition tasks.
+ Understand some of the limitations of neural networks.",1,"This module will introduce students to the basics of neural networks and pattern matching. They will learn how to construct and train simple neural networks, and how to use them for pattern recognition tasks.",Elective,01/01/1900," Neural network researcher/developer.
+ Machine learning engineer.
+ Data scientist.
+ Pattern recognition engineer.",Yes,ISE
+ISE 417,Legal/Professional Ethics," Understand the legal and professional ethical issues surrounding the practice of law.
+
+ Learn about the rules governing the legal profession.
+
+ Understand the ethical principles that lawyers are expected to uphold.   
+
+ Consider the impact of legal and ethical issues on the legal profession and on society as a whole.",1,"This module will explore the legal and professional ethical issues surrounding the practice of law. Students will learn about the rules governing the legal profession, as well as the ethical principles that lawyers are expected to uphold. The module will also consider the impact of legal and ethical issues on the legal profession, and on society as a whole.",Elective,01/01/1900,"Legal Counsel
+Compliance Officer
+Cybersecurity Analyst
+Data Privacy Officer
+IT Risk Manager
+IT governance professional",,ISE
+ISE 418,Ebusiness," Understand the different types of ebusinesses and how they operate      
+ Learn about the different technologies used to support ebusinesses      
+ Understand the legal and ethical issues associated with ebusiness       
+ Gain an overview of the ebusiness landscape",2,"This module provides an introduction to the world of ebusiness. You will learn about the different types of ebusinesses, how they operate, and the challenges they face. You will also learn about the different technologies that are used to support ebusinesses, including webbased applications and electronic commerce. Finally, you will learn about the legal and ethical issues associated with ebusiness.",Elective,01/01/1900," EBusiness Consultant
+ EBusiness Manager
+ EBusiness Analyst
+ EBusiness Developer",,ISE
+ISE 419,Software Verification &Validation," Understand the basics of software verification and validation
+ Learn about different techniques for verifying and validating software   
+ Understand common tools and methods used in the software development process
+ Be able to apply these techniques and tools to realworld scenarios      ",2,"This module will cover the basics of software verification and validation. Students will learn about different techniques for verifying and validating software, as well as common tools and methods used in the software development process. By the end of the module, students should be able to apply these techniques and tools to realworld scenarios.",Elective,01/01/1900," Software Developer
+ Software Quality Assurance Engineer
+ Software Test Engineer
+ Systems Analyst",,ISE
+ISE 421,Software Evolution and Reengineering," Understand the principles of software evolution and reengineering       
+ Apply these principles to realworld software development projects       
+ Understand the impact of software evolution and reengineering on software development
+ Understand the benefits and challenges of software evolution and reengineering.",2,This module will provide students with an understanding of the principles of software evolution and reengineering. The students will learn how to apply these principles to realworld software development projects.,Mandetory,01/01/1900," Software Developer
+ Software Engineer
+ Software Evolution and Reengineering Consultant
+ Project Manager",,ISE
+ISE 422,System Integration & Software Testing," Understand the principles of system integration and software testing     
+ Design, implement, and test software systems
+ Troubleshoot and debug software systems
+ Evaluate the effectiveness of software testing methods",2,"This module will provide students with an understanding of the principles of system integration and software testing. Students will learn how to design, implement, and test software systems. They will also learn how to troubleshoot and debug software systems.",Mandetory,01/01/1900," System Integration Engineer
+ Software Test Engineer
+ Software Quality Assurance Engineer
+ Software Development Manager",Yes,ISE
+ISE 423,Human Computer Interaction," Understand the principles of good user interface design and how to apply them to realworld design problems.
+
+ Learn about user research methods and how to use them to understand the needs of users.
+
+ Design user interfaces that are easy and effective to use.
+
+ Understand the importance of user feedback and how to use it to improve the design of user interfaces.",2,"Human Computer Interaction is the study of how people interact with computers and how to design user interfaces that are easy and effective to use. In this module, you will learn about the principles of good user interface design and how to apply them to the design of websites, software applications, and mobile apps. You will also learn about user research methods and how to use them to understand the needs of users and design user interfaces that meet their needs.",Mandetory,01/01/1900," User Interface Designer
+
+ User Experience Researcher
+
+ Software Developer
+
+ Graphic Designer",Yes,ISE
+ISE 424,Artificial Intelligence," Understand AI history and approaches
+ Understand AI applications
+ Understand ethical considerations surrounding AI
+ Apply AI concepts and techniques to solve problems",2,"This module will provide students with an introduction to artificial intelligence (AI) concepts and techniques. Students will learn about AI history and approaches, AI applications, and ethical considerations surrounding AI. Students will also have the opportunity to apply AI concepts and techniques to solve problems.",Mandetory,01/01/1900," Artificial intelligence researcher
+ Artificial intelligence software engineer
+ Artificial intelligence applications developer
+ Artificial intelligence consultant",,ISE
+ISE 425,Systems Security & Cryptography," Understand the principles of security and cryptography, and how to apply them to realworld systems.
+
+ Learn about the different types of attacks that can be used against systems, and how to defend against them.
+
+ Gain handson experience in designing and implementing security solutions for realworld systems.
+
+ Understand the tradeoffs involved in designing security solutions, and how to balance security and other concerns.",2,"This module covers the basics of systems security and cryptography. Students will learn about the principles of security and cryptography, and how to apply them to realworld systems. They will also learn about the different types of attacks that can be used against systems, and how to defend against them.",Mandetory,01/01/1900," Security Engineer
+
+ Security Analyst
+
+ Security Consultant
+
+ Information Security Specialist",,ISE
+HIT400,Capstone Design Project," Students will learn how to identify and solve realworld problems.       
+ Students will learn how to apply their knowledge and skills to a design project.
+ Students will learn how to work collaboratively in a team.
+ Students will learn how to present their findings to an audience.        ",4,A capstone design project is a module that allows students to work on a design project of their choice. The project can be anything from designing a new product to improving an existing one. The aim of the module is to give students the opportunity to apply their knowledge and skills to a realworld problem.,Mandetory,01/01/1900," Product designer
+ Industrial designer
+ User experience designer
+ Graphic designer",Yes,ISE
+ISE 426,Cloud Computing," Understand the basics of how cloud computing works
+ Be able to identify the benefits and drawbacks of using cloud computing  
+ Be able to select the most appropriate cloud computing solution for a given task or project
+ Be able to effectively manage and monitor a cloud computing solution     ",2,"Cloud Computing is the practice of using a network of remote servers to store, manage, and process data, rather than using a local server or personal computer.",Elective,01/01/1900," Cloud Computing Specialist
+ Cloud Computing Consultant
+ Cloud Computing Engineer
+ Cloud Computing Architect",,ISE
+ISE 427,Java Network Programming," Understand the basics of network programming in Java.
+
+ Set up a network connection.
+
+ Send and receive data.
+
+ Program sockets.",2,"This module will cover the basics of network programming in Java. Students will learn how to set up a network connection, how to send and receive data, and how to program sockets. By the end of the module, students should be able to:",Elective,01/01/1900," Network programmer
+
+ Java programmer
+
+ Web programmer
+
+ Software engineer",Yes,ISE
+ISE 428,Formal languages and Automata," Understand the syntax and semantics of formal languages
+ Understand the automata that recognise them
+ Understand the connection between formal languages and automata
+ Understand the applications of these theories in computer science",2,"This module introduces the theory of formal languages and automata. It covers the syntax and semantics of formal languages, and the automata that recognise them. The module also covers the connection between formal languages and automata, and the applications of these theories in computer science.      ",Elective,01/01/1900," formal languages researcher
+ automata researcher
+ computer science researcher
+ formal languages and automata lecturer",,ISE

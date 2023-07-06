@@ -1,0 +1,42 @@
+
+<title>  {%block title%}
+
+    I N A R D- Log In
+    
+        {%endblock%}
+        
+          </title>
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" >
+          
+          <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+        
+          {%block style%}
+        
+        
+        
+          {%endblock%}
+    </head>
+    <body>
+    
+      {%block body%}
+        
+
+
+<div class="container">
+  <h2>Inard Admin LogIn</h2>
+  <form action="https://www.w3schools.com/action_page.php">
+    <div class="form-group">
+      <label for="email">Username:</label>
+      <input type="text" class="form-control" id="Username" placeholder="Username" name="Username">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{%endblock%}

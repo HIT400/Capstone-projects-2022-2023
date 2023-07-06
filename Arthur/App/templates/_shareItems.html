@@ -1,0 +1,399 @@
+{%extends "header.html"%}
+{%block title%}
+
+Identity and Access Management
+
+
+
+{%endblock%}
+
+{%block style%}
+
+<style>
+  * {
+      box-sizing: border-box;
+  }
+.carousel-indicators{
+margin-top: 1rem;
+position: absolute;
+top: 15px;
+bottom: auto;
+right: 0;
+z-index: 1;
+display: flex;
+justify-content: center;
+padding-left: 0;
+margin-right: 15%;
+margin-left: 15%;
+list-style: none;
+}
+
+ .carousel-indicators li {
+list-style: none;
+box-sizing: border-box;
+position: relative;
+flex: 0 1 auto;
+width: 30px;
+height: 13px;
+margin-right: 3px;
+margin-left: 3px;
+text-indent: -999px;
+cursor: pointer;
+background-color: #bfa647;}
+
+  .inard{background-color: #bfa647;}
+  .carousel-control-prev-icon, .carousel-control-next-icon{color: #bfa647;}
+
+  body {
+      margin: 0;
+      font-family: Arial;
+  }
+  
+  .header {
+      text-align: center;
+      padding: 32px;
+  }
+  
+  .row {
+      display: -ms-flexbox; /* IE10 */
+      display: flex;
+      -ms-flex-wrap: wrap; /* IE10 */
+      flex-wrap: wrap;
+      padding: 0 4px;
+  }
+  
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-contentb {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#captionb {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-contentb, #captionb {    
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.closeb {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.closeb:hover,
+.closeb:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-contentb {
+      width: 100%;
+  }
+}
+
+.row .card{margin-bottom: 15px;}
+
+
+
+.checkbox-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+
+.checkbox-input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkbox-input::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+}
+.checkbox-input:checked::before {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+</style>
+
+{%endblock%}
+
+
+{%block body%} 
+
+<div class="container">
+
+   
+<form method="post" action="{{url_for('shareItems', person=person)}}">
+
+<div class="card mb-4">
+  
+  <div class="card-body">
+    <div class="form-floating mb-3 mt-3">
+      <label for="User">Share With (Address of user to view the Information)</label>
+      <input type="text" class="form-control" id="User" placeholder="Enter User Address" name="User">
+      
+    </div>
+    <label for="User">Share Duration</label>
+    <div class="input-group mb-3">
+      
+      
+        <select class="form-select form-control" name="durationmrs" id="durationmrs">
+          <option value="Minutes">Minutes</option>
+          <option value="Hours">Hours</option>
+          <option value="Weeks">Weeks</option>
+          <option value="Months">Months</option>
+          <option value="Years">Years</option>
+        </select>
+     
+      <input type="text" class="form-control required" placeholder="Enter duration" name="duration" required>
+    </div>
+
+    
+    </div>
+</div>
+    
+    
+    
+    
+    <div class="card mb-4">
+  
+  <div class="card-body">
+
+  <div class="row justify-content-between align-items-center g-2">
+
+    <div class="col"> <h1 class="card-title col">
+        Personal Details
+      </h1>
+    </div>
+  
+    
+    <div class="col "> 
+       <div class="row justify-content-end align-items-end g-2">
+     <div class="form-check form-check-inline">
+      <input class="form-check-input" type="checkbox" id="PersonalDetails" name="PersonalDetails[]" value="PersonalDetails" style="height: 25px; width:25px;">
+      <label class="form-check-label" for="PersonalDetails">Select</label>
+      </div>
+       </div>
+      
+    
+    </div>
+  </div>
+    
+
+
+
+ 
+
+  <h2 class="card-title">{{pp[0]}}</h2>
+    <div class="row justify-content-center align-items-center g-2">
+      <div class="col-md-4 mb-3 border-bottom"><strong>Date Of Birth : </strong> {{pp[1]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Email : </strong> {{pp[2]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Cell : </strong> {{pp[3]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Phone  : </strong> {{pp[4]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Address  : </strong> {{pp[5]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>National ID  : </strong> {{pp[6]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Passport Number  : </strong> {{pp[7]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Passport Expiry Date   : </strong> {{pp[8]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Employed   : </strong> {{pp[9]}}</div>
+      <div class="col-md-4 mb-3 border-bottom"><strong>Highest Education   : </strong> {{pp[10]}}</div>
+    </div>
+
+
+  
+  </div>
+
+</div>
+
+<div class="card mb-4">
+  
+  <div class="card-body">
+    
+    <h1 class="card-title">
+      Registered Documents
+    </h1>
+
+    {%for a in docs%}
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="{{ a | replace(' ', '_') }}" value="{{a}}" name="documents">
+  <label class="form-check-label" for="{{ a | replace(' ', '_') }}">{{a}}</label>
+  </div>
+ 
+  {%endfor%}
+    
+  </div>
+
+</div>
+
+
+
+
+<div class="card mb-4">
+  
+  <div class="card-body">
+    
+    <h1 class="card-title">
+      Medical Records
+    </h1>
+
+    {%for a in medz%}
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="{{ a | replace(' ', '_') }}" value="{{a}}" name="medicals">
+  <label class="form-check-label" for="{{ a | replace(' ', '_') }}">{{a}}</label>
+  </div>
+ 
+  {%endfor%}
+    
+  </div>
+
+</div>
+
+
+
+
+
+
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">Share Profile</h4>
+    <p class="card-text">
+      <button type="submit" class="btn btn-primary">Generate Share Link</button>
+      
+      <div id="rnd">
+
+      </div>
+    </p>
+  </div>
+</div>
+</form>
+<!-- Some borders are removed -->
+
+
+
+</div>
+
+<script>
+  function getLink(){
+    var requiredFields = $('.required'); // Get all required fields
+  var isFormValid = true; // Assume the form is valid initially
+
+  // Iterate over each required field and check if it has a value
+  requiredFields.each(function() {
+    if ($(this).val() === '') {
+      isFormValid = false; // If a required field is empty, the form is invalid
+    }
+  });
+
+  if (isFormValid) {
+    var selectedDocs = []; // Create an empty array to store selected items
+
+  $('input[name="documents"]:checked').each(function() { // Loop over each selected checkbox
+    selectedDocs.push($(this).val()); // Add the checkbox value to the array
+  });
+
+
+
+  var selectedMeds = []; // Create an empty array to store selected items
+
+  $('input[name="medicals"]:checked').each(function() { // Loop over each selected checkbox
+    selectedMeds.push($(this).val()); // Add the checkbox value to the array
+  });
+
+    $.ajax({
+      url:"{{url_for('shareItems', person=person)}}",
+      type:"POST",
+      data:{
+        User : $('input[name="User"]').val(),
+        durationmrs : $('#durationmrs').val(),
+        duration : $('input[name="duration"]').val(),
+        PersonalDetails : $('input[name="PersonalDetails[]"]').val(),
+        medicals:selectedMeds,
+        documentms:selectedDocs},
+        dataType: "json",
+      success:function(data) {
+        
+        $("#rnd").replaceWith(data)
+        
+      }
+
+  });
+
+  event.preventDefault();
+  }
+}
+
+
+</script>
+
+
+   
+
+{%endblock%}
+
+

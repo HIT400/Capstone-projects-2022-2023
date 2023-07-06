@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" >
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+
+
+
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+    
+    .header {
+        text-align: center;
+        padding: 32px;
+    }
+    
+    .row {
+        display: -ms-flexbox; /* IE10 */
+        display: flex;
+        -ms-flex-wrap: wrap; /* IE10 */
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+    
+    /* Create four equal columns that sits next to each other */
+    .column {
+        -ms-flex: 25%; /* IE10 */
+        flex: 25%;
+        max-width: 25%;
+        padding: 0 4px;
+    }
+    
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+    
+    /* Responsive layout - makes a two column-layout instead of four columns */
+    @media screen and (max-width: 800px) {
+        .column {
+            -ms-flex: 50%;
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+    
+    /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+        .column {
+            -ms-flex: 100%;
+            flex: 100%;
+            max-width: 100%;
+        }
+    }
+    </style>
+
+
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">I N A R D</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Property Development</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us!</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <div class="row"> 
+    
+    {%for m in rez[0][15].split("'")%}
+    {%for i in m.split(", ")%}
+    {%for n in i.split("[")%}
+    {%for o in n.split("]")%}
+    
+    
+    {%if o!=("")%}
+    <div class="col-md-3 ">
+    <img src="{{ url_for('static', filename = 'forSale') }}/{{rez[0][1]}}/{{o}}" alt="{{o}}" style="width:100%">
+     </div>
+    {%endif%}
+    {% endfor%}
+    {% endfor%}
+    {% endfor%}
+    {% endfor%}
+      
+   
+ 
+
+
+    
+  </div>
+  
+</div>
+<br><br>
+
+<div class="container">
+<div class="row">
+  
+  <div class="card col-md-12">
+    <div class="card-header">{{rez[0][1]}}</div>
+  <div class="card-body">
+
+  <div class="row"> 
+    
+    <!--pics-->
+    {%for m in rez[0][15].split("'")%}
+    {%for i in m.split(", ")%}
+    {%for n in i.split("[")%}
+    {%for o in n.split("]")%}
+    
+    
+    {%if o!=("")%}
+    {%if l> 3%}
+    <div class="col-md-3 ">
+      
+    <img src="{{ url_for('static', filename = 'forSale') }}/{{rez[0][1]}}/{{o}}" alt="{{o}}" style="width:100%">
+     </div>
+     {%elif l==3%}
+     <div class="col-md-4 ">
+      
+      <img src="{{ url_for('static', filename = 'forSale') }}/{{rez[0][1]}}/{{o}}" alt="{{o}}" style="width:100%">
+       </div>
+       {%elif l==2%}
+       <div class="col-md-6">
+        
+        <img src="{{ url_for('static', filename = 'forSale') }}/{{rez[0][1]}}/{{o}}" alt="{{o}}" style="width:100%">
+         </div>
+         {%elif l==1%}
+         <div class="col-md-1">
+          
+          <img src="{{ url_for('static', filename = 'forSale') }}/{{rez[0][1]}}/{{o}}" alt="{{o}}" style="width:100%">
+           </div>
+     {%endif%}
+    {%endif%}
+    {% endfor%}
+    {% endfor%}
+    {% endfor%}
+    {% endfor%}
+    <!--/pics-->
+      
+   
+  
+    {%if l> 3%}
+
+    <div class="col-md-3 ">
+      Location<br>
+      {{rez[0][2]}}, {{rez[0][3]}}, {{rez[0][4]}}<br>
+    </div>
+  
+  <div class="col-md-3 ">
+    Property Type : {{rez[0][5]}}<br>
+  
+    {%if rez[0][6] !='' %}
+    Land Area : {{rez[0][6]}} m<sup>2</sup><br>
+    {%endif%}
+  
+    {%if rez[0][7] !='' %}
+    Office Area : {{rez[0][7]}} m<sup>2</sup><br>
+    {%endif%}
+  
+    {%if rez[0][8] !='' %}
+    Warehouse Area : {{rez[0][8]}} m<sup>2</sup><br>
+    {%endif%}
+  </div>
+  
+  <div class="col-md-3 ">
+    {%if rez[0][9] !='' %}
+    Number Of Bedrooms : {{rez[0][9]}}<br>
+    {%endif%}
+  
+    {%if rez[0][10] !='' %}
+    Number Of Bathrooms : {{rez[0][10]}} 
+    {%endif%}
+  </div>
+  
+  
+    <div class="col-md-3 ">
+    <h6>General Features</h6>
+    <ul>
+    {% for m in rez[0][14].split("'")%}
+    {%if m !=']' %}
+    {%if m !='['%}
+    {%if m !=', '%}
+  <li>{{m}}</li>
+  {%endif%}
+  {%endif%}
+  {%endif%}
+    {% endfor%}
+  </ul>
+  </div>
+  
+  <div class="col-md-3 ">
+  
+    <h6>Internal Features</h6>
+    <ul>
+    {% for m in rez[0][12].split("'")%}
+    {%if m !=']' %}
+    {%if m !='['%}
+  <li>{{m}}</li>
+  {%endif%}
+  {%endif%}
+    {% endfor%}</ul>
+  </div>
+  
+   
+  
+  
+    <div class="col-md-3 ">
+    <h6>External Features</h6>
+    <ul>
+    {% for m in rez[0][13].split("'")%}
+    {%if m !=']' %}
+    {%if m !='['%}
+  <li>{{m}}</li>
+  {%endif%}
+  {%endif%}
+    {% endfor%}</ul>
+  </div>
+  
+  <div class="col-md-9">
+  
+  Description<br>
+  {%if rez[0][11] !='' %}
+  {{rez[0][11]}} 
+  {%endif%}
+  </div>
+  
+    {%elif l==3%}
+   
+ <div class="col-md-4 ">
+    Location<br>
+    {{rez[0][2]}}, {{rez[0][3]}}, {{rez[0][4]}}<br>
+  </div>
+
+<div class="col-md-4 ">
+  Property Type : {{rez[0][5]}}<br>
+
+  {%if rez[0][6] !='' %}
+  Land Area : {{rez[0][6]}} m<sup>2</sup><br>
+  {%endif%}
+
+  {%if rez[0][7] !='' %}
+  Office Area : {{rez[0][7]}} m<sup>2</sup><br>
+  {%endif%}
+
+  {%if rez[0][8] !='' %}
+  Warehouse Area : {{rez[0][8]}} m<sup>2</sup><br>
+  {%endif%}
+</div>
+
+<div class="col-md-4 ">
+  {%if rez[0][9] !='' %}
+  Number Of Bedrooms : {{rez[0][9]}}<br>
+  {%endif%}
+
+  {%if rez[0][10] !='' %}
+  Number Of Bathrooms : {{rez[0][10]}} 
+  {%endif%}
+</div>
+
+
+  <div class="col-md-4 ">
+  <h6>General Features</h6>
+  <ul>
+  {% for m in rez[0][14].split("'")%}
+  {%if m !=']' %}
+  {%if m !='['%}
+  {%if m !=', '%}
+<li>{{m}}</li>
+{%endif%}
+{%endif%}
+{%endif%}
+  {% endfor%}
+</ul>
+</div>
+
+<div class="col-md-4 ">
+
+  <h6>Internal Features</h6>
+  <ul>
+  {% for m in rez[0][12].split("'")%}
+  {%if m !=']' %}
+  {%if m !='['%}
+<li>{{m}}</li>
+{%endif%}
+{%endif%}
+  {% endfor%}</ul>
+</div>
+
+ 
+
+
+  <div class="col-md-4 ">
+  <h6>External Features</h6>
+  <ul>
+  {% for m in rez[0][13].split("'")%}
+  {%if m !=']' %}
+  {%if m !='['%}
+<li>{{m}}</li>
+{%endif%}
+{%endif%}
+  {% endfor%}</ul>
+</div>
+
+<div class="col-md-8">
+
+Description<br>
+{%if rez[0][11] !='' %}
+{{rez[0][11]}} 
+{%endif%}
+</div>
+{%endif%}
+
+
+
+    </div>
+
+  </div>
+  <div class="card-footer">Price : 
+    {%if rez[0][19] !='' %}
+    {{rez[0][19]}} 
+    {%endif%}</div>
+    
+  </div>
+
+
+
+  
+</div>
+</div>
+
+
+
+</body>
+</html>
+<script src="{{ url_for('static', filename = 'jquery.min.js') }}" ></script>
+  <script src="{{ url_for('static', filename = 'popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+  
+  <script src="{{ url_for('static', filename = 'bootstrap-multiselect.js') }}" ></script>
+
+<script>
+  $(document).ready(function(){
+   $('#internalFeatures').multiselect({
+    nonSelectedText: 'Select Select Internal Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+   
+
+   $('#externalFeatures').multiselect({
+    nonSelectedText: 'Select External Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#generalFeatures').multiselect({
+    nonSelectedText: 'Select General Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#propertyType').multiselect({
+    nonSelectedText: 'Select Property Type',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+  
+   
+  });
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+  </script>

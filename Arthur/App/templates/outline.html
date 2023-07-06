@@ -1,0 +1,290 @@
+{%extends "header.html"%}
+{%block title%}
+
+I N A R D Home
+
+{%endblock%}
+
+{%block body%}  
+<div class="container">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+  <form name="sechi">
+
+<div class="card  col-md-6" style="margin-bottom: 15px; margin-left: auto; margin-right: auto;">
+  <h2 style="align-self: center; ">Search For</h2><br>
+    <div class="input-group mb-3 justify-content-center">
+     
+      
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="forSale" name="srchType" value="forSale" checked>
+        <label class="custom-control-label" for="forSale">Property For Sale</label>
+      </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="forRent" name="srchType" value="forRent">
+      <label class="custom-control-label" for="forRent">Property to Rent</label>
+    </div>
+    
+    </div>
+    </div>
+
+
+
+    <div class="input-group mb-3">
+      <input type="text" id="addressedCity" class="form-control" placeholder="Search by city/town, surburb, or street">
+      
+    </div>
+    <div id="Searched" class="collapse"> 
+<div class="row">
+  
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" id="City" class="form-control" placeholder="City">
+        <div class="input-group-append">
+        
+         </div>
+      </div>
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        
+        <select id="propertyType"  class="form-control" id="propertyType">
+          <option >Property Type</option>
+          {% if prop!="" %}
+
+          {% for c in prop %}
+          <option value="{{c}}">{{c[0]}}</option>
+
+          {% endfor %}
+          
+          {% else %}
+          <option value="House">House</option>
+          <option value="Flat">Flat</option>
+          <option value="Office">Office</option>
+          <option value="Warehouse">Warehouse</option>
+          {% endif %}
+            
+        </select>
+      
+    </div>
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <div class="input-group-prepend">
+          <select id="sizeSearchCriteria" class="form-control">
+            <option>Area to search</option>
+            <option value="Land">Land</option>
+            <option value="office">Office</option>
+            <option value="Warehouse">Warehouse</option>
+          </select>
+        </div>
+         <input type="text" id="sizeSearch" class="form-control" placeholder="Area">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-secondary" disabled>m<sup>2</sup></button>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" id="noOfBeds" class="form-control" placeholder="Bedrooms">
+        
+      </div>
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" id="noOfBaths"  class="form-control" placeholder="Bathrooms">
+        
+      </div>
+
+
+
+    <div class="input-group mb-3 col-md-4 col-sm-12">
+      <input type="text" id="maxPrice" class="form-control" placeholder="Maximum Price">
+      
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+      <div style="float: left;">
+        <a href="#Searched" class="btn btn-outline-secondary" data-toggle="collapse">More Options</a>
+        
+      </div>
+
+<div style="float:right">
+  <button class="btn btn-outline-secondary" type="submit">Search</button>  
+</div>
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+    </div>
+  </div>
+
+</div>
+<br><br>
+
+<div class="container">
+<div class="row" id="imba_dzitsva">
+
+
+ 
+
+{% if sales!="" %}
+  
+<div class="card">
+  
+  <div class="card-body">
+    <h4 class="card-title">Your seach results...</h4>
+    <div class="row">
+{% for b in sales%}     
+{% for a in b%}
+<div class="card col-md-4">
+  <img class="card-img-top" src="{{ url_for('static', filename = 'Properties') }}/{{a[16]}}/{{a[15].split("'")[1]}}" alt="Card image" style="width:100%">
+  <div class="card-body">
+    <h4 class="card-title">{{a[1]}}</h4>
+    <p class="card-text">{{a[9]}} Bedrooms and {{a[10]}} Bathrooms </p>
+    <p class="card-text"> {{a[2]}}, {{a[3]}}, {{a[4]}} </p>
+
+    <h5>Price : {{a[19]}} </h5>
+
+    
+
+    <a href="/property/{{db}}/{{a[0]}}" class="btn btn-primary">See More</a>
+  </div>
+</div>
+{% endfor%}
+{% endfor%}
+</div>
+ </div>
+</div>
+
+{% else %}
+<div class="card">
+ 
+  <div class="card-body">
+  
+ 
+<h4 class="card-title">Suggested properties for sale</h4>
+<div class="row">
+  
+
+  {% for a in suggs1%}
+  <div class="card col-md-4">
+    <img class="card-img-top" src="{{ url_for('static', filename = 'Properties') }}/{{a[16]}}/{{a[15].split("'")[1]}}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{a[1]}}</h4>
+      <p class="card-text">{{a[9]}} Bedrooms and {{a[10]}} Bathrooms </p>
+      <p class="card-text"> {{a[2]}}, {{a[3]}}, {{a[4]}} </p>
+  
+      <h5>Price : {{a[19]}} </h5>
+  
+      
+  
+      <a href="/property/forSale/{{a[0]}}" class="btn btn-primary">See More</a>
+    </div>
+  </div>
+  
+    {% endfor%}
+</div>
+   </div>
+</div>
+
+<div class="card">
+ 
+  <div class="card-body">
+    <h4 class="card-title">Suggested properties to rent</h4>
+   <div class="row">
+     
+
+
+    {% for a in suggs2%}
+    <div class="card col-md-4">
+      <img class="card-img-top" src="{{ url_for('static', filename = 'Properties') }}/{{a[16]}}/{{a[15].split("'")[1]}}" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">{{a[1]}}</h4>
+        <p class="card-text">{{a[9]}} Bedrooms and {{a[10]}} Bathrooms </p>
+        <p class="card-text"> {{a[2]}}, {{a[3]}}, {{a[4]}} </p>
+    
+        <h5>Price : {{a[19]}} </h5>
+    
+        
+    
+        <a href="/property/forRent/{{a[0]}}" class="btn btn-primary">See More</a>
+      </div>
+    </div>
+      
+      {% endfor%}
+   </div>
+    </div>
+  </div>
+  
+
+  
+
+  
+  
+  {% endif %}
+  
+  
+  
+</div>
+</div>
+<script src="{{ url_for('static', filename = 'jquery.min.js') }}" ></script>
+  <script src="{{ url_for('static', filename = 'popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+  
+<!--data to be specified-->
+<script>
+  
+  $(document).ready(function() {
+$('form').on('submit', function(event) {
+
+  $.ajax({
+      url:"/search/",
+      type:"POST",
+      data:{
+        srchType : document.forms["sechi"]["srchType"].value,
+      addressedCity : $('#addressedCity').val(),
+        City : $('#City').val(),
+        propertyType : $('#propertyType').val(),
+        sizeSearchCriteria : $('#sizeSearchCriteria').val(),
+        sizeSearch: $('#sizeSearch').val(),
+        noOfBeds : $('#noOfBeds').val(),
+        noOfBaths : $('#noOfBaths').val(),
+        
+        maxPrice : $('#maxPrice').val()},
+        dataType: "json",
+      success:function(data) {
+        
+        $("#imba_dzitsva").replaceWith(data)
+        
+      }
+
+  });
+
+  event.preventDefault();
+
+
+});
+});
+
+</script>
+{%endblock%}

@@ -1,0 +1,315 @@
+
+{% if user!="Site_Admin" %}
+{% extends 'dzheader.html' %}
+{% else %}
+{% extends 'dheader.html' %}
+{% endif %}
+
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+    
+     
+      {%block style%}
+       <style>
+        .box__dragndrop,
+        .box__uploading,
+        .box__success,
+        .box__error {
+          display: none;
+        }
+        
+        .box.has-advanced-upload {
+          background-color: white;
+          outline: 2px dashed black;
+          outline-offset: -10px;
+        }
+        .box.has-advanced-upload .box__dragndrop {
+          display: inline;
+        }
+
+
+        .box.is-dragover {
+          background-color: grey;
+        }
+
+        .box.is-uploading .box__input {
+          visibility: none;
+        }
+        .box.is-uploading .box__uploading {
+          display: block;
+        }
+
+
+       </style>
+    
+      {%endblock%}
+
+  {%block body%}
+    
+<div class="container">
+  <div class="row justify-content-center align-items-center g-2">
+   
+ 
+  <div class="card bg-light text-dark col-md-6">
+    <div class="card-body">
+      <!--- start search container -->
+
+      {% if riz['Status']=="Add" %}
+
+
+  <form action="/addcourse/" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input type="text" class="form-control" id="CourseName" placeholder="Enter Course Name" name="CourseName">
+    <label for="CourseName">Course Name</label>
+  </div>
+
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="CourseCode" placeholder="Company Cell" name="CourseCode">
+    <label for="CourseCode">Course Code</label>
+  </div>
+
+
+      <div class="form-floating mb-3 mt-3">
+        <textarea class="form-control" id="CourseDescription" name="CourseDescription" placeholder="University's goes here"></textarea>
+        <label for="CourseDescription">Course Description</label>
+      </div>
+
+      <div>
+      <label for="CourseDuration">Course Duration</label>
+      <div class="input-group" >
+        
+        <input type="text" class="form-control"  id="CourseDuration" name="CourseDuration" placeholder="Course Duration">
+
+
+      
+          <select class="form-select" id="sel1" name="CourseDurationMsr">
+            <option>Weeks</option>
+            <option>Months</option>
+            <option>Years</option>
+          </select>
+
+      
+
+    
+      </div>
+      </div>
+    
+
+      <div class="form-floating mb-3 mt-3" >
+        <select name="CourseField"  class="form-control" id="CourseField">
+          <option>Aeronautics and Aviation Science</option>
+          <option>Anthropology</option>
+          <option>Art</option>
+          <option>Business Administration</option>
+          <option>Chemistry</option>
+          <option>Economics</option>
+          <option>Education</option>
+          <option>Engineering</option>
+          <option>ICT</option>
+            
+          
+        </select>
+        <label for="CourseField" class="form-label">Select Course Field (select one):</label>
+      </div>
+
+
+
+      <div class="form-floating mb-3 mt-3" >
+        <select name="CourseLevel"  class="form-control" id="CourseLevel">
+          <option>Certificate</option>
+          <option>Diploma</option>
+          <option>Degree</option>
+          <option>Honours</option>
+          <option>Masters</option>
+          <option>Doctorate</option>
+       
+            
+          
+        </select>
+        <label for="CourseLevel" class="form-label">Select Course Field (select one):</label>
+      </div>
+
+
+
+
+      <div class="form-floating mb-3 mt-3">
+        <input type="date" class="form-control" id="CourseStartDate" name="CourseStartDate" placeholder="University's goes here"></textarea>
+        <label for="CourseStartDate">Course Start Date</label>
+      </div>
+
+      <div class="form-floating mb-3 mt-3">
+        <textarea class="form-control" id="CoursePrerequisites" name="CoursePrerequisites" placeholder="University's goes here" cols="4"></textarea>
+        <label for="CoursePrerequisites">Course Prerequisites (one per line)</label>
+      </div>
+
+
+      <div class="form-floating mb-3 mt-3">
+        <textarea class="form-control" id="CourseJobs" name="CourseJobs" placeholder="University's goes here" cols="4"></textarea>
+        <label for="CourseJobs">Jobs the Course is directly applicable in(one per line)</label>
+      </div>
+
+
+
+
+      
+<div style="float:right">
+<button class="btn btn-outline-secondary btn-lg" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+{% else %}
+
+
+
+<div class="card-title">
+  You've succesifully registered the Course
+
+
+</div>
+
+<p>{{ riz['Result']}}</p>
+
+
+
+
+{%endif%}
+    </div>
+  </div>
+  </div>
+
+<div class="card bg-light text-dark col-md-6">
+  
+  <form class="box" method="post" action="" enctype="multipart/form-data">
+    <div class="box__input">
+      <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+      <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+      <button class="box__button" type="submit">Upload</button>
+    </div>
+    <div class="box__uploading">Uploading…</div>
+    <div class="box__success">Done!</div>
+    <div class="box__error">Error! <span></span>.</div>
+  </form>
+
+</div>
+
+
+
+</div>
+</div>
+
+ 
+ <script>
+
+  var isAdvancedUpload = function() {
+    var div = document.createElement('div');
+    return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+  }();
+
+
+  var $form = $('.box');
+
+if (isAdvancedUpload) {
+  $form.addClass('has-advanced-upload');
+}
+
+
+
+if (isAdvancedUpload) {
+
+  var droppedFiles = false;
+
+  $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  })
+  .on('dragover dragenter', function() {
+    $form.addClass('is-dragover');
+  })
+  .on('dragleave dragend drop', function() {
+    $form.removeClass('is-dragover');
+  })
+  .on('drop', function(e) {
+    droppedFiles = e.originalEvent.dataTransfer.files;
+  });
+
+}
+
+
+$form.on('submit', function(e) {
+  if ($form.hasClass('is-uploading')) return false;
+
+  $form.addClass('is-uploading').removeClass('is-error');
+
+  if (isAdvancedUpload) {
+    // ajax for modern browsers
+    if (isAdvancedUpload) {
+      e.preventDefault();
+    
+      var ajaxData = new FormData($form.get(0));
+    
+      if (droppedFiles) {
+        $.each( droppedFiles, function(i, file) {
+          ajaxData.append( $input.attr('name'), file );
+        });
+      }
+    
+      $.ajax({
+        url: $form.attr('action'),
+        type: $form.attr('method'),
+        data: ajaxData,
+        dataType: 'json',
+        cache: false,
+        contentType: false,
+        processData: false,
+        complete: function() {
+          $form.removeClass('is-uploading');
+        },
+        success: function(data) {
+          $form.addClass( data.success == true ? 'is-success' : 'is-error' );
+          if (!data.success) $errorMsg.text(data.error);
+        },
+        error: function() {
+          // Log the error, show an alert, whatever works for you
+        }
+      });
+    }
+
+
+
+
+
+
+  } else {
+    // ajax for legacy browsers
+  }
+});
+
+
+
+ </script> 
+ 
+{%endblock%}
+
+
+
+

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>  {%block title%}
+
+
+
+    {%endblock%}
+    
+      </title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap/css/bootstrap.min.css') }}" >
+
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+    
+      {%block style%}
+    
+    
+    
+      {%endblock%}
+  <style>
+.card{border: none;}
+
+
+
+  </style>
+</head>
+<body>
+
+  <ul class="nav justify-content-center">
+   
+    <li class="nav-item">
+      <a class="nav-link" href="{{url_for('addSelf')}}">Register Self</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Register As Practitioner</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled">Disabled</a>
+    </li>
+  </ul>
+<br>
+
+{% with messages = get_flashed_messages() %}
+                {% if messages %}
+                   {% for message in messages %}
+                   
+                   <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                       <span aria-hidden="true">&times;</span>
+                       <span class="sr-only">Close</span>
+                     </button>
+                      {{ message }}
+                   </div>
+                     
+                     
+                      
+                   {% endfor %}
+                {% endif %}
+             {% endwith %}
+
+{%block body%}
+
+
+
+{%endblock%}
+
+
+<br><br>
+
+
+ 
+  <div class="jumbotron text-center" style="padding: 15px;margin-bottom: 0%;">
+  <p style="font-weight: bold;">&copy; 2017 - 2021 I N A R D Properties&trade;</p>
+</div>
+
+</body>
+</html>
+<script src="{{ url_for('static', filename = 'jquery-3.6.0.min.js') }}" ></script>
+  <script src="{{ url_for('static', filename = 'popper.min.js') }}"></script> 
+   <script src="{{ url_for('static', filename = 'bootsrap/js/bootstrap.bundle.js') }}"></script>
+
+  
+  <script src="{{ url_for('static', filename = 'bootstrap-multiselect.js') }}" ></script>
+
+<script>
+  $(document).ready(function(){
+   $('#CourseField').multiselect({
+    nonSelectedText: 'Select Course Field',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+   
+
+   $('#externalFeatures').multiselect({
+    nonSelectedText: 'Select External Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#generalFeatures').multiselect({
+    nonSelectedText: 'Select General Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#propertyType').multiselect({
+    nonSelectedText: 'Select Property Type',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+  
+   
+  });
+  </script>

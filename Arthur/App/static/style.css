@@ -1,0 +1,62 @@
+/*======================================
+//--//-->   FORM INPUT
+======================================*/
+
+.form-a #sendmessage {
+  color: #2eca6a;
+  border: 1px solid #26a356;
+  display: none;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form-a #errormessage {
+  color: red;
+  display: none;
+  border: 1px solid red;
+  text-align: center;
+  padding: 15px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form-a #sendmessage.show,
+.form-a #errormessage.show,
+.form-a .show {
+  display: block;
+}
+
+.form-a .validation {
+  color: red;
+  display: none;
+  margin: 4px 0 20px 0;
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.form-a label {
+  color: #000000;
+  position: relative;
+}
+
+.form-a select.form-control-lg:not([size]):not([multiple]) {
+  height: 3.5rem;
+}
+
+.form-a .form-control {
+  border-radius: 0;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.form-a .form-control.form-control-a {
+  height: 3.5rem;
+}
+
+.form-a .form-control:focus {
+  box-shadow: none;
+  border-color: #2eca6a;
+}
+

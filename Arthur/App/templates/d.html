@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" >
+  
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+
+
+  <style>
+.card{border: none;}
+
+
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+  <a class="navbar-brand" href="#">I N A R D</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Property Development</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contact Us!</a>
+      </li>    
+    </ul>
+  </div>  
+</nav>
+<br>
+
+<div class="container">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+  <form action="/search/" method="POST">
+
+<div class="card  col-md-6" style="margin-bottom: 15px; margin-left: auto; margin-right: auto;">
+  <h2 style="align-self: center; ">Search For</h2><br>
+    <div class="input-group mb-3 justify-content-center">
+     
+      
+      <div class="custom-control custom-radio custom-control-inline">
+        <input type="radio" class="custom-control-input" id="forSale" name="srchType" value="forSale" checked>
+        <label class="custom-control-label" for="forSale">Property For Sale</label>
+      </div>
+    <div class="custom-control custom-radio custom-control-inline">
+      <input type="radio" class="custom-control-input" id="forRent" name="srchType" value="forRent">
+      <label class="custom-control-label" for="forRent">Property to Rent</label>
+    </div>
+    
+    </div>
+    </div>
+
+
+
+    <div class="input-group mb-3">
+      <input type="text" name="addressedCity" class="form-control" placeholder="Search by city/town, surburb, or street">
+      
+    </div>
+    <div id="Searched" class="collapse"> 
+<div class="row">
+  
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" name="City" class="form-control" placeholder="City">
+        <div class="input-group-append">
+        
+         </div>
+      </div>
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        
+        <select name="propertyType"  class="form-control" id="propertyType">
+          <option >Property Type</option>
+          <option value="volvo">Land</option>
+          <option value="fiat">Office</option>
+          <option value="audi">Warehouse</option>
+        </select>
+      
+    </div>
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <div class="input-group-prepend">
+          <select name="sizeSearchCriteria" class="form-control">
+            <option>Area to search</option>
+            <option value="volvo">Land</option>
+            <option value="fiat">Office</option>
+            <option value="audi">Warehouse</option>
+          </select>
+        </div>
+         <input type="text" name="sizeSearch" class="form-control" placeholder="Area">
+        <div class="input-group-append">
+          <button type="button" class="btn btn-outline-secondary" disabled>m<sup>2</sup></button>
+        </div>
+      </div>
+
+
+
+
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" name="noOfBeds" class="form-control" placeholder="Bedrooms">
+        
+      </div>
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        <input type="text" name="noOfBeds" class="form-control" placeholder="Bathrooms">
+        
+      </div>
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        
+        <select name="generalFeatures"  class="form-control" id="generalFeatures" multiple>
+          <option >General Features</option>
+          <option value="volvo">Land</option>
+          <option value="fiat">Office</option>
+          <option value="audi">Warehouse</option>
+        </select>
+      
+    </div>
+
+      <div class="input-group mb-3 col-md-4 col-sm-12">
+        
+          <select name="internalFeatures"  class="form-control" id="internalFeatures" multiple>
+            <option >Internal Features</option>
+            <option value="volvo">Land</option>
+            <option value="fiat">Office</option>
+            <option value="audi">Warehouse</option>
+          </select>
+        
+      </div>
+
+
+
+      <div class="input-group mb-3 col-md-4 col-sm-6 ">
+        
+        <select name="externalFeatures"  class="form-control" id="externalFeatures" multiple>
+          <option >External Features</option>
+          <option value="volvo">Land</option>
+          <option value="fiat">Office</option>
+          <option value="audi">Warehouse</option>
+        </select>
+      
+    </div>
+
+
+    <div class="input-group mb-3 col-md-4 col-sm-12">
+      <input type="text" name="maxPrice" class="form-control" placeholder="Maximum Price">
+      
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+  </div>
+
+
+
+      <div style="float: left;">
+        <a href="#Searched" class="btn btn-outline-secondary" data-toggle="collapse">More Options</a>
+        
+      </div>
+
+<div style="float:right">
+  <button class="btn btn-outline-secondary" type="submit">Search</button>  
+</div>
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+    </div>
+  </div>
+
+</div>
+<br><br>
+
+<div class="container">
+<div class="row">
+    
+    
+{% for b in sales%}
+{% for a in b%}
+{{ a }}
+  <div class="card col-md-4">
+    <img class="card-img-top" src="{{ url_for('static', filename = '{{a[1]}}/{{a[15][1]}}') }}" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">{{a[1]}}</h4>
+      <p class="card-text"> A {{a[9]}} bedroom, {{a[10]}} bathroom {{a[5]}}</p>
+
+      <h5>Price : {{a[19]}}   {{a[1]}}/{{a[15][0]}}</h5>
+      <a href="#" class="btn btn-primary">See More</a>
+    </div>
+  </div>
+  {% endfor%}
+  {% endfor%}
+    
+
+
+  
+</div>
+</div>
+
+
+
+</body>
+</html>
+<script src="{{ url_for('static', filename = 'jquery.min.js') }}" ></script>
+  <script src="{{ url_for('static', filename = 'popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+  
+  <script src="{{ url_for('static', filename = 'bootstrap-multiselect.js') }}" ></script>
+
+<script>
+  $(document).ready(function(){
+   $('#internalFeatures').multiselect({
+    nonSelectedText: 'Select Internal Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+   
+
+   $('#externalFeatures').multiselect({
+    nonSelectedText: 'Select External Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#generalFeatures').multiselect({
+    nonSelectedText: 'Select General Features',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+
+   $('#propertyType').multiselect({
+    nonSelectedText: 'Select Property Type',
+    enableFiltering: true,
+    enableCaseInsensitiveFiltering: true,
+    buttonWidth:'100%'
+   });
+  
+   
+  });
+  </script>

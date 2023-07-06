@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<title>  
+
+  I N A R D- Log In
+
+      
+        </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" >
+        
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+            
+      
+        <style>
+.card{border: none;
+  box-shadow: 3px 15px 15px 3px rgba(0, 0, 0, .4), 0px 10px 10px 0px rgba(0, 0, 0, 0.3);}
+
+
+
+  </style>
+        
+  </head>
+  <body>
+  
+
+      
+
+
+<div class="container ">
+  <br>
+  <br> <br>
+  <br>
+  <div class="d-flex aalign-items-cente p-3 justify-content-center">
+
+<div class="card col-md-8">
+  
+  <div class="card-body">
+    <h2>I N A R D  Admin <small>Log In</small></h2>
+<form action="{{ url_for('enterd') }}" method="POST">
+  <div class="form-group">
+    <label for="email">Username:</label>
+    <input type="text" class="form-control" id="Username" placeholder="Username" name="Username">
+  </div>
+  <div class="form-group">
+    <label for="pwrd">Password:</label>
+    <input type="password" class="form-control" id="pwrd" placeholder="Enter password" name="pwrd">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+</div>
+  </div>
+</div>
+</div>
+
+</body>
+</html>

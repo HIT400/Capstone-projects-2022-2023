@@ -1,0 +1,193 @@
+{% extends 'dheader.html' %}
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+  
+     
+      {%block style%}
+    <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+  }
+  
+  td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+      background-color: #dddddd;
+  }
+  </style>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap.min.css') }}" >
+      
+      <link rel="stylesheet" href="{{ url_for('static', filename = 'bootstrap-multiselect.css') }}" >
+    
+      {%endblock%}
+
+  {%block body%}
+    
+
+<div class="container">
+  <div id="accordion">
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOne">
+          Edit Features
+        </a>
+      </div>
+      <div id="collapseOne" class="collapse show" data-parent="#accordion">
+        <div class="card-body">
+          <table>
+            <tr>
+              <th>General Features</th>
+              <th>External Features</th>
+              <th>Internal Features</th>
+            </tr>
+            {% if Features!="" %}
+            
+            
+        {%for a in Features%} 
+        <tr>
+          <td>{{a[0]}}</td>
+          <td>{{a[1]}}</td>
+          <td>{{a[2]}}</td>
+          <!--<td><a name="" id="" class="btn btn-danger" href="#" role="button">Delete</a></td> -->
+        </tr>
+
+
+        {%endfor%}
+        {% endif %}
+        <form action="{{url_for('enterdf')}}" method="POST">
+        <tr>
+          <td><input type="text" class="form-control" placeholder="General Features" name="gfeat"></td>
+          <td><input type="text" class="form-control" placeholder ="External Features" name="efeat"></td>
+          <td><input type="text" class="form-control" placeholder="Internal Features" name="ifeat"></td>
+        </tr>
+        <tr>
+          
+          <td><button type="submit" class="btn btn-primary">Submit</button></td>
+        </tr>
+        </form>
+        </table>
+
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+        Add User
+      </a>
+      </div>
+      <div id="collapseTwo" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Username</th>
+              <th>Cell</th>
+            </tr>
+            {% if Features!="" %}
+            
+            
+        {%for a in users%} 
+        <tr>
+          <td>{{a[0]}}</td>
+          <td>{{a[1]}}</td>
+          <td>{{a[2]}}</td>
+          <!--<td><a name="" id="" class="btn btn-danger" href="#" role="button">Delete</a></td> -->
+        </tr>
+          </table>
+          {% endfor %}
+
+{% endif %}
+
+          <form action="/add_user/" method="POST">
+
+            <div class="form-group">
+              <label for="fname">User's name:</label>
+              <input type="text" class="form-control" id="fname" placeholder="Full Name" name="fname">
+            </div>
+            <div class="form-group">
+              <label for="Username">Username:</label>
+              <input type="text" class="form-control" id="Username" placeholder="Username" name="Username">
+            </div>
+            <div class="form-group">
+              <label for="pwrd">Password:</label>
+              <input type="password" class="form-control" id="pwrd" placeholder="Enter password" name="pwrd">
+            </div>
+            <div class="form-group">
+              <label for="cell">Cell:</label>
+              <input type="text" class="form-control" id="cell" placeholder="Cell" name="cell">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        
+        </div>
+      </div>
+    </div>
+  
+    <div class="card">
+      <div class="card-header">
+        <a class="card-link" data-toggle="collapse" href="#collapseOned">
+          Edit Property Types
+        </a>
+      </div>
+      <div id="collapseOned" class="collapse" data-parent="#accordion">
+        <div class="card-body">
+          <table>
+            <tr>
+              <th>Property Type</th>
+              
+            </tr>
+            {% if prop!="" %}
+            
+            
+        {%for a in prop%} 
+        <tr>
+          <td>{{a[0]}}</td>
+                    
+          <!--<td><a name="" id="" class="btn btn-danger" href="#" role="button">Delete</a></td> -->
+        </tr>
+
+        {%endfor%}
+        {%endif%}
+        <form action="{{url_for('enterdprop')}}" method="POST">
+        <tr>
+          <td><input type="text" class="form-control" placeholder="Property Type" name="gprop"></td>
+                    
+          <td><button type="submit" class="btn btn-primary">Submit</button></td>
+        </tr>
+        </form>
+        </table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+<script src="{{ url_for('static', filename = 'jquery.min.js') }}" ></script>
+  <script src="{{ url_for('static', filename = 'popper.min.js') }}"></script>
+  <script src="{{ url_for('static', filename = 'bootstrap.min.js') }}"></script>
+  
+  <script src="{{ url_for('static', filename = 'bootstrap-multiselect.js') }}" ></script>
+
+
+
+{%endblock%}
+<br><br>
+
+
+

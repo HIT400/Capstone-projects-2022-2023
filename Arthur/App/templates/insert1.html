@@ -1,0 +1,274 @@
+
+{% if user!="Site_Admin" %}
+{% extends 'dzheader.html' %}
+{% else %}
+{% extends 'dheader.html' %}
+{% endif %}
+
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+    
+     
+      {%block style%}
+       
+    
+      {%endblock%}
+
+  {%block body%}
+    
+<div class="container">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+  <form action="/save/" method="post"  enctype="multipart/form-data">
+
+
+    <div class="card  col-md-6" style="margin-bottom: 15px; margin-left: auto; margin-right: auto;">
+      <h2 style="align-self: center; ">Property is </h2><br>
+        <div class="input-group mb-3 justify-content-center">
+         
+          
+          <div class="custom-control custom-radio custom-control-inline">
+            <input type="radio" class="custom-control-input" id="forSale" name="srchType" value="forSale" checked>
+            <label class="custom-control-label" for="forSale">for Sale</label>
+          </div>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="forRent" name="srchType" value="forRent">
+          <label class="custom-control-label" for="forRent">for Rent</label>
+        </div>
+        
+        </div>
+        </div>
+<div class="row">
+  
+
+      <div class="input-group mb-3 col-md-12">
+        <input type="text" name="proptitle" class="form-control" placeholder="Title">
+        
+      </div>
+
+
+      <div class="input-group mb-3 col-md-6">
+        <textarea type="text" class="form-control" rows="3" placeholder="Address" name="address"></textarea>
+        <div class="input-group-append">
+        
+         </div>
+      </div>
+
+      <div class="input-group mb-3 col-md-6">
+        <textarea type="text" class="form-control" rows="3" placeholder="Description" name="Description"></textarea>
+        <div class="input-group-append">
+        
+         </div>
+      </div>
+  
+
+      <div class="input-group mb-3 col-md-4">
+        <input type="text" class="form-control" placeholder="Surbub" name="surbub">
+        
+      </div>
+
+      <div class="input-group mb-3 col-md-4">
+        
+        <select name="propertyType"  class="form-control" id="propertyType">
+          <option value="All">Select Property Type</option>
+          
+          {% if prop!="" %}
+
+          {% for c in prop %}
+          <option value="{{c}}">{{c[0]}}</option>
+
+          {% endfor %}
+          
+          {% else %}
+          <option value="House">House</option>
+          <option value="Flat">Flat</option>
+          <option value="Office">Office</option>
+          <option value="Warehouse">Warehouse</option>
+          {% endif %}
+            
+          
+        </select>
+      
+    </div>
+
+      <div class="input-group mb-3 col-md-4">
+        <input type="text" class="form-control" placeholder="City" name="City">
+        <div class="input-group-append">
+        
+         </div>
+      </div>
+     
+     
+     
+
+
+    
+
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" placeholder="Land Area" name="area_Land">
+      <div class="input-group-append">
+      
+       </div>
+    </div>
+     
+
+
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" placeholder="Office Area" name="area_Office">
+      
+    </div>
+
+
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" placeholder="Warehouse Area" name="area_Warehouse">
+      <div class="input-group-append">
+      
+       </div>
+    </div>
+
+
+       
+ 
+
+
+
+    
+
+    <div class="input-group mb-3 col-md-4">
+        
+      <select name="generalFeatures"  class="form-control" id="generalFeatures" multiple>
+         {% if Features!="" %}
+        {% for gf in Features %}
+        <option value="{{gf[0]}}">{{gf[0]}}</option>
+        {% endfor %}
+        {% else %}
+        <option value="Furnised">Furnished</option>
+        <option value="InterComm">InterComm System</option>
+        <option value="Borehole">Borehole</option>
+        <option value="Solar System">Solar System</option>
+        {% endif %} 
+    
+      </select>
+    
+  </div>
+
+    <div class="input-group mb-3 col-md-4">
+      
+        <select name="internalFeatures"  class="form-control" id="internalFeatures" multiple>
+          {% if Features!="" %}
+          {% for gf in Features %}
+        <option value="{{gf[2]}}">{{gf[2]}}</option>
+        {% endfor %}
+       {% else %}
+          <option value="gcounters">Granite Counter Tops</option>
+          <option value="fitted cupboards">Cupboards</option>
+          <option value="wkinClosets">Walk In Closets</option>
+           {% endif %}
+        </select>
+      
+    </div>
+
+
+
+    <div class="input-group mb-3 col-md-4">
+      
+      <select name="externalFeatures"  class="form-control" id="externalFeatures" multiple>
+        {% if Features!="" %}
+        
+        
+        {% for gf in Features %}
+        <option value="{{gf[1]}}">{{gf[1]}}</option>
+        {% endfor %}
+        {% else %}
+        <option value="garden">Garden Space</option>
+        <option value="lawn">Lawn</option>
+        <option value="garage">Garage</option>
+        <option value="efence">Electric Fence</option>
+        {% endif %}
+      </select>
+    
+  </div>
+
+  <div class="input-group mb-3 col-md-4">
+    <input type="text" class="form-control" placeholder="Bedrooms" name="noOfBeds">
+    <div class="input-group-append">
+    
+     </div>
+  </div>
+   
+
+
+  <div class="input-group mb-3 col-md-4">
+    <input type="text" class="form-control" placeholder="Bathrooms" name="noOfBaths">
+    
+  </div>
+
+
+    <div class="input-group mb-3 col-md-4">
+      <input type="text" class="form-control" placeholder="Price" name="price">
+      
+    </div>
+
+    <div class="input-group mb-3 col-md-12">
+    <div class="custom-file mb-3">
+      <input type="file" class="custom-file-input" id="customFile" name="pics[]" multiple>
+      <label class="custom-file-label" for="customFile">Choose file</label>
+    </div>
+    </div>
+<br>
+{% if user== "Private_Owner"%}
+<div style="float:right">
+  <button class="btn btn-outline-secondary btn-lg" type="submit">Save</button>  
+</div>
+
+{% else %}
+
+<div class="input-group mb-3 col-md-4">
+  <input type="text" class="form-control" placeholder="Owner's Full Name" name="owner_name">
+  
+</div>
+
+<div class="input-group mb-3 col-md-4">
+  <input type="text" class="form-control" placeholder="Owner's Cell Number" name="owner_cell">
+  
+</div>
+
+
+<div class="input-group mb-3 col-md-4">
+  <input type="email" class="form-control" placeholder="Owner's Email Address" name="owner_email">
+  
+</div>
+
+
+
+
+</div>
+
+
+<div style="float:right">
+<button class="btn btn-outline-secondary btn-lg" type="submit">Save</button>  
+</div>
+{% endif %}
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+    </div>
+  </div>
+</div>
+
+ 
+  
+ 
+{%endblock%}
+
+
+
+

@@ -1,0 +1,62 @@
+
+{% if user!="Site_Admin" %}
+{% extends 'dzheader.html' %}
+{% else %}
+{% extends 'dheader.html' %}
+{% endif %}
+
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+    
+     
+      {%block style%}
+       
+    
+      {%endblock%}
+
+  {%block body%}
+    
+ 
+  
+  <div class="row">
+    <div class="col-12 ">
+      <div class="card">
+        <div class="card-header">
+          Upload Document
+        </div>
+        <div class="card-body">
+          <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+            
+              <div class="form-floating mb-3 mt-3">
+                <input type="text" class="form-control" id="doctype" placeholder="Enter email" name="doctype">
+                <label for="doctype">Document Type</label>
+              </div>
+            
+            <div class="form-group">
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" id="uploads" name="uploads">
+                <label class="custom-file-label" for="fileInput">Choose file</label>
+              </div>
+            
+          
+            <div class="form-group">
+              <input type="submit" value="Upload" class="btn btn-secondary">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+ 
+{%endblock%}
+
+
+
+

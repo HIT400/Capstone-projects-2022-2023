@@ -1,0 +1,161 @@
+
+{% if user!="Site_Admin" %}
+{% extends 'dzheader.html' %}
+{% else %}
+{% extends 'dheader.html' %}
+{% endif %}
+
+{%block title%}
+
+I N A R D- Add Property
+
+    {%endblock%}
+    
+     
+      {%block style%}
+       
+    
+      {%endblock%}
+
+  {%block body%}
+    
+<div class="container">
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+      <!--- start search container -->
+
+      {% if riz['Status']=="Add" %}
+
+
+  <form action="/register/" method="post"  enctype="multipart/form-data">
+
+
+   
+<div class="row">
+  
+
+  <div class="form-floating mb-3 mt-3 ml-3">
+    <input type="text" class="form-control" id="fname" placeholder="Enter University Name" name="fname">
+    <label for="fname">Name</label>
+  </div>
+
+
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="dob" placeholder="Enter Phone 2" name="dob">
+    <label for="dob" class="n-2">Date Of Birth </label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="email" placeholder="Enter email" name="email">
+    <label for="email">Email</label>
+  </div>
+  
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="phone" placeholder="Enter Phone 1" name="phone">
+    <label for="phone">Cell </label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="phone1" placeholder="Enter Phone 2" name="phone1">
+    <label for="phone1" class="n-2">Cell 1 / Telephone </label>
+  </div>
+
+
+      <div class="form-floating mb-3 mt-3">
+        <textarea class="form-control" id="addr" name="addr" placeholder="University's goes here"></textarea>
+        <label for="addr">Address</label>
+      </div>
+
+
+      
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="nid" placeholder="Enter email" name="nid">
+    <label for="nid">National ID</label>
+  </div>
+
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="text" class="form-control" id="pnum" placeholder="Enter email" name="pnum">
+    <label for="pnum">Passport</label>
+  </div>
+
+  <div class="form-floating mb-3 mt-3">
+    <input type="date" class="form-control" id="pex" placeholder="Enter Phone 2" name="pex">
+    <label for="pex" class="n-2">Date Of Birth </label>
+  
+  </div>
+
+      <div class="form-floating mb-3 mt-3">
+        <select class="form-select" id="epmstatus" name="epmstatus">
+          <option>Employed</option>
+          <option>Unemployed</option>
+        
+        </select>
+        <label for="epmstatus" class="form-label"> Employment Status</label>
+      </div>
+
+
+    
+      
+      <div class="form-floating mb-3 mt-3">
+        <select class="form-select" id="edu" name="edu">
+          <option>Grade 7</option>
+          <option>O-level</option>
+          <option>A-level</option>
+          <option>Undergradute</option>
+          <option>Masters</option>
+          <option>Doctorate</option>
+        
+        </select>
+        <label for="edu" class="form-label"> Highest Education Attained</label>
+      </div>
+
+
+      
+<div >
+<button class="btn btn-outline-primary" type="submit">Save</button>  
+</div>
+
+    
+      
+      
+      <!-- end search card Light card -->
+    
+    
+    </form>
+
+
+
+{% else %}
+
+
+
+<div class="card-title">
+  You've succesifully registered the onto the system
+
+
+</div>
+
+<h4>The Public Key</h4>
+<p>{{ riz }}</p>
+
+
+
+
+{%endif%}
+    </div>
+  </div>
+</div>
+
+ 
+  
+ 
+{%endblock%}
+
+
+
+
