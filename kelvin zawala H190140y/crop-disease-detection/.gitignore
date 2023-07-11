@@ -1,0 +1,9 @@
+# ignore jupyter notebooks
+*.ipynb
+PlantVillage
+Plant_leave*
+__py*
+env
+Label*
+uploads
+lightning*
