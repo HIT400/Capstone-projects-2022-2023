@@ -52,7 +52,5 @@ For help with the notebook, visit https://github.com/divyansh1195/Tomato-Leaf-Di
 To test the trained model, load the Keras model into the Flask app in line 37
 Run pip3 -r install requirements/requirements_app.txt , then start the Flask app to use test pictures by uploading and evaluating results.
 
-## Logs
 
-[Include logs or output from the project, if applicable.]
 
