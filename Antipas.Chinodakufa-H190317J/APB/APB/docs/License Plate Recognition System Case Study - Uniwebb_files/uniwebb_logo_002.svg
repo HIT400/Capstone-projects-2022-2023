@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="100%" y="100%"
+	 width="100%" height="100%" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="#D13920" cx="49.75" cy="49.875" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="7.875" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="24.375" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="35.875" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="91.805" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="75.305" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="49.75" cy="63.805" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="20.076" cy="20.166" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="31.744" cy="31.833" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="39.875" cy="39.965" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="79.424" cy="79.514" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="67.756" cy="67.846" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="59.625" cy="59.714" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="7.785" cy="49.84" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="24.285" cy="49.84" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="35.786" cy="49.84" r="2.729">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="91.715" cy="49.84" r="7.801">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="75.215" cy="49.84" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="63.715" cy="49.84" r="2.729">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="20.076" cy="79.514" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="31.744" cy="67.846" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="39.876" cy="59.714" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="79.424" cy="20.166" r="7.8">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="67.756" cy="31.833" r="4.68">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+<circle fill="#D13920" cx="59.625" cy="39.965" r="2.73">
+		<animateTransform attributeName="transform"
+			attributeType="XML"
+			type="rotate"
+			from="0 50 50"
+			to="360 50 50"
+			dur="15s"
+			repeatCount="indefinite"/>
+</circle>
+</svg>
